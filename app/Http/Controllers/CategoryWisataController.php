@@ -1,0 +1,61 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Http\Request;
+use App\CategoryWisata;
+use App\Http\Controllers\Controller;
+class CategoryWisataController extends Controller
+{
+    public function index()
+    {   
+        $categories = CategoryWisata::orderBy('created_at')->paginate(10);
+        return view('CBT.CategoryWisata.index', compact('categories'));
+    }
+
+    public function store(Request $request)
+    {
+        $categories = new CategoryWisata;
+        $categories->nama_category = $request->nama_category;
+        $categories->deskripsi = $request->deskripsi;
+        if($categories->save()){
+            Alert::success('Success', $request->nama_category. ' berhasil ditambahkan');
+
+            return redirect()->back()->with(['success' => 'Kategori: ' . $categories->nama_category . ' Ditambahkan']);
+        }
+    }
+
+    public function destroy($id)
+    {
+        $categories = CategoryWisata::findOrFail($id);
+        $categories->delete();
+         Alert::success('Success', 'Category berhasil dihapus');
+        return redirect()->back()->with(['success' => 'Kategori: ' . $categories->nama_category . ' Telah Dihapus']);
+    }
+
+    public function edit($id)
+    {
+        $categories = CategoryWisata::findOrFail($id);
+        return view('CBT.CategoryWisata.edit', compact('categories'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        try {
+            //select data berdasarkan id
+            $categories = CategoryWisata::findOrFail($id);
+            //update data
+            $categories->update([
+                'nama_category' => $request->name,
+                'deskripsi' => $request->description
+            ]);
+            
+            //redirect ke route kategori.index
+            return redirect(route('kategori.index'))->with(['success' => 'Kategori: ' . $categories->name . ' Ditambahkan']);
+        } catch (\Exception $e) {
+            //jika gagal, redirect ke form yang sama lalu membuat flash message error
+            return redirect()->back()->with(['error' => $e->getMessage()]);
+        }
+    }
+}
