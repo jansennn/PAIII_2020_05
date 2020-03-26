@@ -22,9 +22,11 @@ class CreateKulinersTable extends Migration
             $table->string('latitude');
             $table->string('alamat');
             $table->unsignedBigInteger('cbt_id');
+            $table->unsignedBigInteger('kabupaten_id');
             $table->timestamps();
 
             $table->foreign('cbt_id')->references('id')->on('cbts');
+	        $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
         });
     }
 

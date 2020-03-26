@@ -20,6 +20,7 @@ class CreateAkomodasisTable extends Migration
             $table->string('longitude');
             $table->string('latitude');
             $table->unsignedBigInteger('cbt_id');
+ 	        $table->unsignedBigInteger('kabupaten_id');
             $table->string('nama_akomodasi');
             $table->string('lokasi');
             $table->string('deskripsi');
@@ -27,6 +28,7 @@ class CreateAkomodasisTable extends Migration
 
 
             $table->foreign('cbt_id')->references('id')->on('cbts');
+	        $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
         });
     }
 

@@ -11,18 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-	Alert::success('Success Title', 'Success Message');
-    return view('welcome');
-});
-
-
+Route::get('/', 'HomeController@index');
+Route::get('/login', 'AutentikasiController@login');
 Route::prefix('admin')->group(function(){
-    Route::resource('/kategori', 'CategoryWisataController')->except([
-        'create', 'show'
-    ]);
+    Route::resource('/kategori', 'CategoryWisataController');
 });
+//login
+Route::get('/login', 'AutentikasiController@login');
+
+Route::prefix('autentikasi')->group(function(){
+    Route::post('login_process', 'AutentikasiController@login_process');
+    //logout
+	Route::get('logout', 'AutentikasiController@logout_process');
+});
+// Route::group(['prefix'=>'autentikasi','as' =>'autentikasi.',function(){
+// 	Route::get('/login','AutentikasiController@login');
+// 	Route::get('/login_process','AutentikasiController@login_process');
+// }]);
 
 Route::get('/coba', function(){
-	return view('wisatawan.home');
+	return view('Autentikasi.login');
 });

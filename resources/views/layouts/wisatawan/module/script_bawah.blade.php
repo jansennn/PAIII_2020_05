@@ -14,3 +14,4 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="Wisatawan/js/google-map.js"></script>
   <script src="Wisatawan/js/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="Wisatawan/css/style2.css">

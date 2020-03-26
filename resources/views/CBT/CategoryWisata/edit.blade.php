@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.CBT.master')
 ​
 @section('title')
     <title>Edit Kategori</title>

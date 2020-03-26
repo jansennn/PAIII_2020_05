@@ -12,16 +12,17 @@ class CreateKabupatensTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('kabupatens', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('alamat');
-            $table->string('nama_kabupaten');
-            $table->string('longitude');
-            $table->string('latitude');
-            $table->timestamps();
-        });
-    }
+        {
+            Schema::create('kabupatens', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->string('alamat');
+                $table->string('nama_kabupaten');
+                $table->string('gambar_kabupaten');
+                $table->string('longitude');
+                $table->string('latitude');
+                $table->timestamps();
+            });
+        }
 
     /**
      * Reverse the migrations.

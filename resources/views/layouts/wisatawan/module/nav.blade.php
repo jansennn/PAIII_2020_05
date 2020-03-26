@@ -12,7 +12,7 @@
 	          <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta"><a href="#" class="nav-link">Book Now</a></li>
+	          <li class="nav-item cta"><a href="{{url('/login')}}" class="nav-link">Login</a></li>
 
 	        </ul>
 	      </div>

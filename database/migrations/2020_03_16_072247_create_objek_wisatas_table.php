@@ -21,6 +21,7 @@ class CreateObjekWisatasTable extends Migration
             $table->string('longitude');
             $table->string('latitude');
             $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('kabupaten_id');
             $table->string('deskripsi');
             $table->unsignedBigInteger('cbt_id');
             $table->timestamps();
@@ -28,6 +29,7 @@ class CreateObjekWisatasTable extends Migration
 
             $table->foreign('category_id')->references('id')->on('category_wisatas');
             $table->foreign('cbt_id')->references('id')->on('cbts');
+	        $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
         });
     }
 

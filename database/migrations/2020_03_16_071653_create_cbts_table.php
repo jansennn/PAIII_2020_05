@@ -16,15 +16,13 @@ class CreateCbtsTable extends Migration
         Schema::defaultStringLength(191);
         Schema::create('cbts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('kabupaten_id');
-            $table->string('nama_kabupaten');
             $table->string('nama');
             $table->string('email');
+	        $table->string('password');	
             $table->string('no_hp');
             $table->timestamps();
 
-        $table->foreign('user_id')->references('id')->on('users');
         $table->foreign('kabupaten_id')->references('id')->on('kabupatens');			
         });
     }

@@ -16,6 +16,8 @@ class CekLogin
      */
     public function handle($request, Closure $next)
     {
+        // $cbt = \App\Cbt::where('email',$request->email)->first();
+        // if($cbt)
         return $next($request);
     }
 }

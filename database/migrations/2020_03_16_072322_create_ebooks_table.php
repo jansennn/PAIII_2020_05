@@ -16,6 +16,7 @@ class CreateEbooksTable extends Migration
         Schema::create('ebooks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('cbt_id');
+	        $table->unsignedBigInteger('kabupaten_id');
             $table->string('judul');
             $table->string('sinopsis');
             $table->string('pengarang');
@@ -24,6 +25,7 @@ class CreateEbooksTable extends Migration
             $table->timestamps();
 
             $table->foreign('cbt_id')->references('id')->on('cbts');
+	        $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
         });
     }
 

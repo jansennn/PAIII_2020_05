@@ -13,6 +13,7 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
+        Schema::defaultStringLength(191);
         Schema::create('events', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_event');
@@ -20,11 +21,13 @@ class CreateEventsTable extends Migration
             $table->string('tgl_akhir');
             $table->string('lokasi');
             $table->unsignedBigInteger('cbt_id');
+            $table->unsignedBigInteger('kabupaten_id');
             $table->string('deskripsi');
             $table->timestamps();
 
 
             $table->foreign('cbt_id')->references('id')->on('cbts');
+            $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
         });
     }
 

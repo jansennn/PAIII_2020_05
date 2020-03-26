@@ -3,12 +3,16 @@
   <head>
     @include('layouts.wisatawan.module.script_atas')  
     @yield('title')
+    <style type="text/css">
+      .kabupaten{
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
 	<!-- nav -->
     @include('layouts.wisatawan.module.nav')  
     <!-- END nav -->
-    
 
 
     @yield('content')
