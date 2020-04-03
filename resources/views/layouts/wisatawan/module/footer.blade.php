@@ -3,8 +3,8 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Vacation</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">Sistem Informasi Pariwisata Kawasan Danau Toba</h2>
+              <p>Danau Toba ,negeri indah kepingan surga.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -14,14 +14,16 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Infromation</h2>
+              <h2 class="ftco-heading-2">Kabupaten</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
-                <li><a href="#" class="py-2 d-block">General Enquiries</a></li>
-                <li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
-                <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
-                <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-                <li><a href="#" class="py-2 d-block">Call Us</a></li>
+                <li><a href="#" class="py-2 d-block">Toba</a></li>
+                <li><a href="#" class="py-2 d-block">Tapanuli Utara</a></li>
+                <li><a href="#" class="py-2 d-block">Samosir</a></li>
+                <li><a href="#" class="py-2 d-block">Humbang Hasundutan</a></li>
+                <li><a href="#" class="py-2 d-block">Simalungun</a></li>
+                <li><a href="#" class="py-2 d-block">Karo</a></li>
+                <li><a href="#" class="py-2 d-block">Dairi</a></li>
+                <li><a href="#" class="py-2 d-block">Pakpak Barat</a></li>
               </ul>
             </div>
           </div>
@@ -55,7 +57,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | PAIII - 2020 - 05 
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

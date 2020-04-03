@@ -14,7 +14,10 @@
 Route::get('/', 'HomeController@index');
 Route::get('/login', 'AutentikasiController@login');
 Route::prefix('admin')->group(function(){
+	Route::get('/index','CbtController@index');
     Route::resource('/kategori', 'CategoryWisataController');
+    Route::resource('/ObjekWisata', 'ObjekWisataController');
+    Route::resource('/Akomodasi', 'AkomodasiController');
 });
 //login
 Route::get('/login', 'AutentikasiController@login');
