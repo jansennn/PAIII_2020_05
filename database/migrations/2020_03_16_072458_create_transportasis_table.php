@@ -20,6 +20,7 @@ class CreateTransportasisTable extends Migration
             $table->string('nama_transportasi');
             $table->string('jenis_transportasi');
             $table->string('alamat');
+            $table->string('foto');
             $table->string('deskripsi');
             $table->timestamps();
 

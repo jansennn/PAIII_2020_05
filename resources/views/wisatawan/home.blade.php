@@ -67,9 +67,9 @@
                     ?>
                        <div class="col-md-3 ftco-animate" >
                             <div class="project-destination" style="margin-bottom: 20px;">
-                                <a href="#" class="img" style="background-image: url(Wisatawan/images/place-1.jpg);">
+                                <a href="#" class="img" style="background-image: url(images/<?= $kabupatens->gambar_kabupaten?>);">
                                     <div class="text">
-                                        <h3><?= $kabupatens->nama_kabupaten?></h3>
+                                        <h3><?= $kabupatens->gambar_kabupaten?></h3>
                                         <span>Cek </span>
                                     </div>
                                 </a>

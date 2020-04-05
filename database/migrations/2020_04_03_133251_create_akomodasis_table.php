@@ -11,16 +11,17 @@ class CreateAkomodasisTable extends Migration
      *
      * @return void
      */
-    public function up()
+   public function up()
     {
         Schema::defaultStringLength(191);
         Schema::create('akomodasis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('jenis_akomodasi');
             $table->string('longitude');
             $table->string('latitude');
+            $table->string('foto');
             $table->unsignedBigInteger('cbt_id');
- 	        $table->unsignedBigInteger('kabupaten_id');
+            $table->unsignedBigInteger('kabupaten_id');
+            $table->unsignedBigInteger('category_akomodasi_id');
             $table->string('nama_akomodasi');
             $table->string('lokasi');
             $table->string('deskripsi');
@@ -28,7 +29,8 @@ class CreateAkomodasisTable extends Migration
 
 
             $table->foreign('cbt_id')->references('id')->on('cbts');
-	        $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
+            $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
+            $table->foreign('category_akomodasi_id')->references('id')->on('akomodasis');
         });
     }
 

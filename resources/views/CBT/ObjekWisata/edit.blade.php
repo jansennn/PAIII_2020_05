@@ -15,7 +15,8 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('kategori.index') }}">Objek Wisata</a></li>
+                            <li class="breadcrumb-item"><a href="#">Manajemen Informasi</a></li>
+                            <li class="breadcrumb-item"><a href="#">Objek Wisata</a></li>
                             <li class="breadcrumb-item active">Edit</li>
                         </ol>
                     </div>
@@ -52,7 +53,7 @@
                                 <div class="form-group">
                                     <label for="kabupaten_id">Kabupaten</label>
                                     <select class="form-control" name="kabupaten_id" readonly>
-                                            <option value="{{$objekWisata->kabupaten_id}}">{{$objekWisata->kabupaten_id}}</option>
+                                            <option value="{{$objekWisata->kabupaten_id}}">{{$objekWisata->kabupaten->nama_kabupaten}}</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -69,7 +70,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="foto">Foto</label>
-                                    <input type="file" name="foto" id="foto" class="form-control {{ $errors->has('foto') ? 'is-invalid':'' }}" required="">
+                                    <input type="file" name="foto" id="foto" class="form-control {{ $errors->has('foto') ? 'is-invalid':'' }}" value="" required="">
                                 </div>
                                 <div class="form-group">
                                     <label for="longitude">Longitude</label>

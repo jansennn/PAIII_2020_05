@@ -15,6 +15,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Manajemen Informasi</a></li>
                             <li class="breadcrumb-item active">Objek Wisata</li>
                         </ol>
                     </div>
@@ -37,7 +38,7 @@
                                 @endalert
                             @endif
 ​                            @slot('body')   
-                            <form role="form" action="{{ route('ObjekWisata.store') }}" method="POST">
+                            <form role="form" action="{{ route('ObjekWisata.store') }}" method="POST"  enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label for="nama_objek_wisata">Nama Objek Wisata</label>

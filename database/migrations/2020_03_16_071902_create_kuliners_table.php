@@ -19,8 +19,10 @@ class CreateKulinersTable extends Migration
             $table->string('nama_kuliner');
             $table->string('jenis_kuliner');
             $table->string('longitude');
+            $table->string('foto');
             $table->string('latitude');
-            $table->string('alamat');
+            $table->string('lokasi');
+            $table->string('deskripsi');
             $table->unsignedBigInteger('cbt_id');
             $table->unsignedBigInteger('kabupaten_id');
             $table->timestamps();

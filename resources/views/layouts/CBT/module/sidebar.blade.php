@@ -50,31 +50,31 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('admin/Akomodasi')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Akomodasi</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('admin/Budaya')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Budaya</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('admin/Kuliner')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Kuliner</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('admin/Ebook')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Ebook</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('admin/Transportasi')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Transportasi</p>
                             </a>
@@ -97,9 +97,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('admin/CategoryAkomodasi')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Produk</p>
+                                <p>Kategori Akomodasi</p>
                             </a>
                         </li>
                     </ul>

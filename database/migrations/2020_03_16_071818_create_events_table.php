@@ -20,6 +20,7 @@ class CreateEventsTable extends Migration
             $table->string('tgl_awal');
             $table->string('tgl_akhir');
             $table->string('lokasi');
+            $table->string('foto');
             $table->unsignedBigInteger('cbt_id');
             $table->unsignedBigInteger('kabupaten_id');
             $table->string('deskripsi');

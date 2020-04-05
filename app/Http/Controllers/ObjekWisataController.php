@@ -23,15 +23,19 @@ class ObjekWisataController extends Controller
     	$objekWisata = new ObjekWisata;
     	$objekWisata->nama_objek_wisata = $request->nama_objek_wisata;
     	$objekWisata->lokasi = $request->lokasi;
-    	$objekWisata->foto = $request->foto;
     	$objekWisata->longitude = $request->longitude;
     	$objekWisata->latitude = $request->latitude;
     	$objekWisata->category_id = $request->category_id;
     	$objekWisata->kabupaten_id = $request->kabupaten_id;
     	$objekWisata->deskripsi = $request->deskripsi;
     	$objekWisata->cbt_id = session('cbt_id');
-
+        //foto
+        $file = $request->file('foto');
+        $gambar = $file->getClientOriginalName();
+        $objekWisata->foto = $gambar;
     	if($objekWisata->save()){
+            
+            $file->move(\base_path() ."/public/images/information/ObjekWisata", $gambar);
     		Alert::success('Success', $request->nama_objek_wisata. ' berhasil ditambahkan');
     		return redirect()->back();
     	}

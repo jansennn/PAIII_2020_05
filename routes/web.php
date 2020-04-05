@@ -16,8 +16,13 @@ Route::get('/login', 'AutentikasiController@login');
 Route::prefix('admin')->group(function(){
 	Route::get('/index','CbtController@index');
     Route::resource('/kategori', 'CategoryWisataController');
+    Route::resource('CategoryAkomodasi', 'CategoryAkomodasiController');
     Route::resource('/ObjekWisata', 'ObjekWisataController');
     Route::resource('/Akomodasi', 'AkomodasiController');
+    Route::resource('/Budaya', 'BudayaController');
+    Route::resource('/Kuliner', 'KulinerController');
+    Route::resource('/Ebook', 'EbookController');
+    Route::resource('/Transportasi', 'TransportasiController');
 });
 //login
 Route::get('/login', 'AutentikasiController@login');

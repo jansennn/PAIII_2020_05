@@ -18,6 +18,7 @@ class CreateEbooksTable extends Migration
             $table->unsignedBigInteger('cbt_id');
 	        $table->unsignedBigInteger('kabupaten_id');
             $table->string('judul');
+            $table->string('foto');
             $table->string('sinopsis');
             $table->string('pengarang');
             $table->string('penerbit');

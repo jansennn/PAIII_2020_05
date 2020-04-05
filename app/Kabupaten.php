@@ -13,4 +13,8 @@ class Kabupaten extends Model
     public function objekWisata(){
     	return $this->hasMany('App\ObjekWisata');
     }
+
+    public function akomodasi(){
+    	return $this->hasMany('App\Akomodasi');
+    }
 }

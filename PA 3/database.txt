@@ -1,0 +1,208 @@
+Schema Migration Database PA 3 - Pariwisata
+
+Kabupaten
+public function up()
+    {
+        Schema::create('kabupatens', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('alamat');
+            $table->string('nama_kabupaten');
+	    $table->string('gambar_kabupaten');
+            $table->string('longitude');
+            $table->string('latitude');
+            $table->timestamps();
+        });
+    }
+
+Cbt
+public function up()
+    {
+        Schema::defaultStringLength(191);
+        Schema::create('cbts', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('kabupaten_id');
+            $table->string('nama_kabupaten');
+            $table->string('nama');
+            $table->string('email');
+	    $table->string('password');	
+            $table->string('no_hp');
+            $table->timestamps();
+
+        $table->foreign('kabupaten_id')->references('id')->on('kabupatens');			
+        });
+    }
+
+
+
+Event
+public function up()
+    {
+        Schema::defaultStringLength(191);
+        Schema::create('events', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_event');
+            $table->string('tgl_awal');
+            $table->string('tgl_akhir');
+            $table->string('lokasi');
+            $table->unsignedBigInteger('cbt_id');
+            $table->unsignedBigInteger('kabupaten_id');
+            $table->string('deskripsi');
+            $table->timestamps();
+
+
+            $table->foreign('cbt_id')->references('id')->on('cbts');
+            $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
+        });
+    }
+
+Kuliner
+public function up()
+    {
+        Schema::defaultStringLength(255);
+        Schema::create('kuliners', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_kuliner');
+            $table->string('jenis_kuliner');
+            $table->string('longitude');
+            $table->string('latitude');
+            $table->string('alamat');
+            $table->unsignedBigInteger('cbt_id');
+            $table->unsignedBigInteger('kabupaten_id');
+            $table->timestamps();
+
+            $table->foreign('cbt_id')->references('id')->on('cbts');
+	    $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
+        });
+    }
+
+
+
+
+CategoryWisata
+public function up()
+    {
+        Schema::create('category_wisatas', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_category');
+            $table->timestamps();
+        });
+    }
+
+ObjekWisata
+ public function up()
+    {
+        Schema::create('objek_wisatas', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_objek_wisata');
+            $table->string('lokasi');
+            $table->string('foto');
+            $table->string('longitude');
+            $table->string('latitude');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('kabupaten_id');
+            $table->string('deskripsi');
+            $table->unsignedBigInteger('cbt_id');
+            $table->timestamps();
+
+
+            $table->foreign('category_id')->references('id')->on('category_wisatas');
+            $table->foreign('cbt_id')->references('id')->on('cbts');
+	    $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
+        });
+    }
+
+Ebook
+ public function up()
+    {
+        Schema::create('ebooks', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('cbt_id');
+	    $table->unsignedBigInteger('kabupaten_id');
+            $table->string('judul');
+            $table->string('sinopsis');
+            $table->string('pengarang');
+            $table->string('penerbit');
+            $table->string('nama_file');
+            $table->timestamps();
+
+            $table->foreign('cbt_id')->references('id')->on('cbts');
+	    $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
+        });
+    }
+
+Budaya
+ public function up()
+    {
+        Schema::create('budayas', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('cbt_id');
+	    $table->unsignedBigInteger('kabupaten_id');
+            $table->string('nama_budaya');
+            $table->string('deskripsi');
+            $table->string('lokasi');
+            $table->timestamps();
+
+            $table->foreign('cbt_id')->references('id')->on('cbts');
+	    $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
+        });
+    }
+
+Transportasi
+ public function up()
+    {
+        Schema::create('transportasis', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('cbt_id');
+	    $table->unsignedBigInteger('kabupaten_id');
+            $table->string('nama_transportasi');
+            $table->string('jenis_transportasi');
+            $table->string('alamat');
+            $table->string('deskripsi');
+            $table->timestamps();
+
+
+            $table->foreign('cbt_id')->references('id')->on('cbts');
+	    $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
+        });
+    }
+
+CategoryAkomodasi
+public function up()
+    {
+        Schema::defaultStringLength(191);
+        Schema::create('category_akomodasis', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama');
+            $table->string('deskripsi');
+            $table->timestamps();
+
+        });
+    }
+
+Akomodasi
+public function up()
+    {
+        Schema::defaultStringLength(191);
+        Schema::create('akomodasis', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('jenis_akomodasi');
+            $table->string('longitude');
+            $table->string('latitude');
+	    $table->string('foto');
+            $table->unsignedBigInteger('cbt_id');
+ 	    $table->unsignedBigInteger('kabupaten_id');
+	    $table->unsignedBigInteger('category_akomodasi_id');
+            $table->string('nama_akomodasi');
+            $table->string('lokasi');
+            $table->string('deskripsi');
+            $table->timestamps();
+
+
+            $table->foreign('cbt_id')->references('id')->on('cbts');
+	    $table->foreign('kabupaten_id')->references('id')->on('kabupatens');
+        });
+    }
+
+ #content{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }

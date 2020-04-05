@@ -1,0 +1,7 @@
+1. gambar_kabupaten - Kabupaten
+2. penambahan foto di akomodasi,
+3. penambahan CategoryWisata(id,nama,deskripsi)
+4. mengganti jenis_akomodasi menjadi category_akomodasi_id
+Tugas
+
+data untuk objek wisata,kuliner,event,transportasi
