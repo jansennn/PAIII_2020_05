@@ -11,3 +11,13 @@ Langkah langkah menjalankan proyek :
 
 
 --------------------------------   Berhasil run project   ----------------------------------
+
+
+
+Langkah Langkah git pull origin master
+
+1. git pull origin master
+2. php artisan migrate:fresh
+3. php artisan db:seed
+
+
