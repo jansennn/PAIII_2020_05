@@ -12,6 +12,15 @@
 	          <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item dropdown">
+	          	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a href="#" class="dropdown-item">Web Design</a></li>
+					<li><a href="#" class="dropdown-item">Web Development</a></li>
+					<li><a href="#" class="dropdown-item">Graphic Design</a></li>
+					<li><a href="#" class="dropdown-item">Digital Marketing</a></li>
+				</ul>
+	          </li>
 	          <li class="nav-item cta"><a href="{{url('/login')}}" class="nav-link">Login</a></li>
 
 	        </ul>
