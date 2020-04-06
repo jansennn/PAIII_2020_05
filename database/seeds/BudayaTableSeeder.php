@@ -17,11 +17,21 @@ class BudayaTableSeeder extends Seeder
 		        'lokasi' => 'Jl. Siliwangi No.8, Balige, Kabupaten Toba Samosir, Sumatera Utara, Indonesia',
 		        'foto' => 'sa.jpg',
 		        'cbt_id' => 1,
-		        'kabupaten_id' => 1,
+		        'kabupaten_id' => 2,
 		        'deskripsi' => 'cantik',
 		        'created_at' => Carbon::now('Asia/Jakarta'),
 		        'updated_at' => Carbon::now('Asia/Jakarta')
-    		]
+    		],
+            [
+                'nama_budaya' => 'Batak Karo',
+                'lokasi' => 'Jl. Siliwangi No.8, Balige, Kabupaten Toba Samosir, Sumatera Utara, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'deskripsi' => 'cantik',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ]
     	]);
     }
 }

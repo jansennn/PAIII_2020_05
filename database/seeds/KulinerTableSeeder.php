@@ -20,11 +20,37 @@ class KulinerTableSeeder extends Seeder
     			'latitude' => '2.3359193',
 		        'lokasi' => 'Jl. Siliwangi No.8, Balige, Kabupaten Toba Samosir, Sumatera Utara, Indonesia',
 		        'cbt_id' => 1,
-		        'kabupaten_id' => 1,
+		        'kabupaten_id' => 2,
 		        'deskripsi' => 'cantik',
 		        'created_at' => Carbon::now('Asia/Jakarta'),
 		        'updated_at' => Carbon::now('Asia/Jakarta')
-    		]
+    		],
+            [
+                'nama_kuliner' => 'DBrands Cafe Balige',
+                'jenis_kuliner' => 'Restorant',
+                'longitude' => '99.06685039999999',
+                'foto' => 'sa.jpg',
+                'latitude' => '2.3297723',
+                'lokasi' => 'Jl. Siliwangi No.8, Balige, Kabupaten Toba Samosir, Sumatera Utara, Indonesia',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'deskripsi' => 'cantik',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_kuliner' => 'Pizza Andaliman',
+                'jenis_kuliner' => 'Restorant',
+                'longitude' => '99.0541291',
+                'foto' => 'sa.jpg',
+                'latitude' => '2.329186',
+                'lokasi' => 'Jl. Siliwangi No.8, Balige, Kabupaten Toba Samosir, Sumatera Utara, Indonesia',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'deskripsi' => 'cantik',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
     	]);
     }
 }
