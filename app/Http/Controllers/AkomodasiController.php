@@ -46,12 +46,31 @@ class AkomodasiController extends Controller
     }	
 
     public function edit($id){
-
+        $akomodasi = Akomodasi::findOrFail($id);
+        return view('CBT.Akomodasi.edit',compact('akomodasi'));
     }
 
-    // public function update(Request request, $id){
-
-    // }
+    public function update(Request $request, $id){
+        try {
+            //select data berdasarkan id
+            $akomodasi = Akomodasi::findOrFail($id);
+            //update data
+            $akomodasi->update([
+                'nama_akomodasi' => $request->nama_akomodasi,
+                'lokasi' => $request->lokasi,
+                'longitude' => $request->longitude,
+                'latitude' => $request->latitude,
+                'deskripsi' => $request->deskripsi
+            ]);
+            
+            //redirect ke route kategori.index
+            Alert::success('Success', $request->nama_akomodasi. ' berhasil diedit');
+            return redirect()->back();
+        } catch (\Exception $e) {
+            //jika gagal, redirect ke form yang sama lalu membuat flash message error
+            return redirect()->back()->with(['error' => $e->getMessage()]);
+        }
+    }
 
     public function destroy($id){
 

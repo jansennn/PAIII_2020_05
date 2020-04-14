@@ -68,9 +68,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('admin/Ebook')}}" class="nav-link">
+                            <a href="{{url('admin/Event')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Ebook</p>
+                                <p>Event</p>
                             </a>
                         </li>
                         <li class="nav-item">

@@ -22,7 +22,7 @@ class CreateKulinersTable extends Migration
             $table->string('foto');
             $table->string('latitude');
             $table->string('lokasi');
-            $table->string('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->unsignedBigInteger('cbt_id');
             $table->unsignedBigInteger('kabupaten_id');
             $table->timestamps();

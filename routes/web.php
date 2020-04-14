@@ -21,7 +21,7 @@ Route::prefix('admin')->group(function(){
     Route::resource('/Akomodasi', 'AkomodasiController');
     Route::resource('/Budaya', 'BudayaController');
     Route::resource('/Kuliner', 'KulinerController');
-    Route::resource('/Ebook', 'EbookController');
+    Route::resource('/Event', 'EventController');
     Route::resource('/Transportasi', 'TransportasiController');
 });
 //login
@@ -32,11 +32,6 @@ Route::prefix('autentikasi')->group(function(){
     //logout
 	Route::get('logout', 'AutentikasiController@logout_process');
 });
-// Route::group(['prefix'=>'autentikasi','as' =>'autentikasi.',function(){
-// 	Route::get('/login','AutentikasiController@login');
-// 	Route::get('/login_process','AutentikasiController@login_process');
-// }]);
 
-Route::get('/coba', function(){
-	return view('Autentikasi.login');
-});
+//Kabupaten
+Route::get('/Kab/{id}', 'KabupatenController@index');

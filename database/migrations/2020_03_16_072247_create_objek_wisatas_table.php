@@ -22,7 +22,7 @@ class CreateObjekWisatasTable extends Migration
             $table->string('latitude');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('kabupaten_id');
-            $table->string('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->unsignedBigInteger('cbt_id');
             $table->timestamps();
 

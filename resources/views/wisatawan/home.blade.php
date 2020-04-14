@@ -1,12 +1,11 @@
 @extends('layouts.wisatawan.master')
 
 @section('title')
-
     <title>Home Kepariwisataan</title>
 @endsection
 
 @section('content')
-	<div class="hero-wrap js-fullheight" style="background-image: url('Wisatawan/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+	<div class="hero-wrap js-fullheight" style="background-image: url({{URL::asset('/images_wisatawan/bg_2.jpg')}});" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -20,38 +19,35 @@
 
 
 	<section class="ftco-section ftco-no-pb ftco-no-pt">
-    	<div class="container">
-	    	<div class="row">
-					<div class="col-md-12">
-						<div class="search-wrap-1 ftco-animate p-4">
-							<form action="#" class="search-property-1">
-        		        		<div class="row">
-        		        			<div class="col-lg-10 align-items-end">
-        		        				<div class="form-group">
-        		        					<label for="#">Search</label>
-        		          				    <div class="form-field">
-        		          					   <div class="icon"><span class="ion-ios-search"></span></div>
-        				                        <input type="text" class="form-control" placeholder="Search Objek Wisata , Event, Akomodasi, Kuliner, Transportasi">
-        				                    </div>
-        			                     </div>
-        		        			</div>
-        		        			
-        		        			<div class="col-lg-2 align-self-end">
-        		        				<div class="form-group">
-        		        					<div class="form-field">
-        				                        <input type="submit" value="Search" class="form-control btn btn-primary">
-        				                    </div>
-        			                     </div>
-        		        			</div>
-        		        		</div>
-		        	        </form>
-		                </div>
+    <div class="container">
+	  	<div class="row">
+				<div class="col-md-12">
+					<div class="search-wrap-1 ftco-animate p-4">
+						<form action="#" class="search-property-1">
+           		<div class="row">
+          			<div class="col-lg-10 align-items-end">
+          				<div class="form-group">
+          					<label for="#">Search</label>
+          				  <div class="form-field">
+             					<div class="icon"><span class="ion-ios-search"></span></div>
+        				        <input type="text" class="form-control" placeholder="Search Objek Wisata , Event, Akomodasi, Kuliner, Transportasi">
+        				      </div>
+        			    </div>
+        		    </div>
+        		    <div class="col-lg-2 align-self-end">
+        		    	<div class="form-group">
+        		        <div class="form-field">
+        				      <input type="submit" value="Search" class="form-control btn btn-primary">
+        				    </div>
+        			    </div>
+        		    </div>
+        		  </div>
+		        	</form>
+		        </div>
 					</div>
 	    	</div>
 	    </div>
     </section>
-
-    
 
 
 
@@ -66,7 +62,7 @@
           @foreach ($kabupatens as $kabupaten)
             <div class="col-md-3 ftco-animate" >
               <div class="project-destination" style="margin-bottom: 20px;">
-                <a href="#" class="img" style="background-image: url(images/<?= $kabupaten->gambar_kabupaten?>);">
+                <a href="{{url('Kab',['id' => $kabupaten->id])}}" class="img" style="background-image: url(Kab/<?= $kabupaten->gambar_kabupaten?>);">
                   <div class="text">
                     <h3><?= $kabupaten->nama_kabupaten?></h3>
                     <span>Cek </span>
@@ -98,62 +94,40 @@
                 <div class="carousel-inner">
                   <div class="item carousel-item active">
                     <div class="row">
-                      <div class="col-sm-4">
-                        <div class="project-wrap">
-                          <a href="#" class="img" style="background-image: url(Wisatawan/images/bg_2.jpg);"></a>
-                          <div class="text p-4">
-                            <span class="price">$300/person</span>
-                            <span class="days">10 Days Tour</span>
-                            <h3><a href="#">Bali, Indonesia</a></h3>
-                            <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p>
-                            <ul>
-                              <li><span class="flaticon-shower"></span>2</li>
-                              <li><span class="flaticon-king-size"></span>3</li>
-                              <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                            </ul>
+                      @foreach($objekWisatas1 as $objekWisata1)
+                        <div class="col-sm-4">
+                          <div class="project-wrap">
+                            <a href="#" class="img" style="background-image: url(Kab/information/ObjekWisata/{{$objekWisata1->foto}});"></a>
+                            <div class="text p-4">
+                              <span class="price">Explore</span>
+                              <span class="days"><span class="badge badge-warning">Objek Wisata</span></span>
+                              <span class="days"> {{ $objekWisata1->kabupaten->nama_kabupaten}} </span>
+                              <h3><a href="#">{{ $objekWisata1->nama_objek_wisata}}</a></h3>
+                              <p class="location"><span class="ion-ios-map"></span> {{ $objekWisata1->lokasi}}</p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="project-wrap">
-                          <a href="#" class="img" style="background-image: url(Wisatawan/images/bg_2.jpg);"></a>
-                          <div class="text p-4">
-                            <span class="price">$300/person</span>
-                            <span class="days">10 Days Tour</span>
-                            <h3><a href="#">Bali, Indonesia</a></h3>
-                            <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p>
-                            <ul>
-                              <li><span class="flaticon-shower"></span>2</li>
-                              <li><span class="flaticon-king-size"></span>3</li>
-                              <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="project-wrap">
-                          <a href="#" class="img" style="background-image: url(Wisatawan/images/bg_2.jpg);"></a>
-                          <div class="text p-4">
-                            <span class="price">$300/person</span>
-                            <span class="days">10 Days Tour</span>
-                            <h3><a href="#">Bali, Indonesia</a></h3>
-                            <p class="location"><span class="ion-ios-map"></span> Bali, Indonesia</p>
-                            <ul>
-                              <li><span class="flaticon-shower"></span>2</li>
-                              <li><span class="flaticon-king-size"></span>3</li>
-                              <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
+                      @endforeach
+                      
                     </div>
                   </div>
 
                   <div class="item carousel-item">
                     <div class="row">
-                      <div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/4.jpg" class="img-responsive img-fluid" alt=""></div></div>
-                      <div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/5.jpg" class="img-responsive img-fluid" alt=""></div></div>
-                      <div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/6.jpg" class="img-responsive img-fluid" alt=""></div></div>
+                      @foreach($objekWisatas2 as $objekWisata2)
+                       <div class="col-sm-4">
+                          <div class="project-wrap">
+                            <a href="#" class="img" style="background-image: url(Kab/information/ObjekWisata/{{$objekWisata2->foto}});"></a>
+                            <div class="text p-4">
+                              <span class="price">Explore</span>
+                              <span class="days"><span class="badge badge-warning">Objek Wisata</span></span>
+                              <span class="days"> {{ $objekWisata2->kabupaten->nama_kabupaten}} </span>
+                              <h3><a href="#">{{ $objekWisata2->nama_objek_wisata}}</a></h3>
+                              <p class="location"><span class="ion-ios-map"></span> {{ $objekWisata2->lokasi}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      @endforeach
                     </div>
                   </div>
                   

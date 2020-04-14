@@ -18,7 +18,7 @@ class CreateBudayasTable extends Migration
             $table->unsignedBigInteger('cbt_id');
 	        $table->unsignedBigInteger('kabupaten_id');
             $table->string('nama_budaya');
-            $table->string('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->string('foto');
             $table->string('lokasi');
             $table->timestamps();

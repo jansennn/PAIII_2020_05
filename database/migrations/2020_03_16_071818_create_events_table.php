@@ -23,7 +23,7 @@ class CreateEventsTable extends Migration
             $table->string('foto');
             $table->unsignedBigInteger('cbt_id');
             $table->unsignedBigInteger('kabupaten_id');
-            $table->string('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
 
 

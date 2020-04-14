@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="deskripsi">Deskripsi</label>
-                                    <textarea name="deskripsi" id="deskripsi" cols="5" rows="5" class="form-control {{ $errors->has('deskripsi') ? 'is-invalid':'' }}" required=""></textarea>
+                                    <textarea class="ckeditor"  name="deskripsi" id="ckedtor" cols="5" rows="5" class="form-control {{ $errors->has('deskripsi') ? 'is-invalid':'' }}" required=""></textarea>
                                 </div>
                             @endslot    
                             @slot('footer')

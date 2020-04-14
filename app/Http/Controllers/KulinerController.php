@@ -12,7 +12,7 @@ class KulinerController extends Controller
     public function index(){
     	$kabupaten_id = session('kabupaten_id');
     	$kabupatens = Kabupaten::findOrFail($kabupaten_id);
-    	$kuliners = Kuliner::all();
+    	$kuliners = Kuliner::where('kabupaten_id', $kabupaten_id)->get();
 
     	return view('CBT.Kuliner.index',compact('kabupatens','kuliners'));
     }

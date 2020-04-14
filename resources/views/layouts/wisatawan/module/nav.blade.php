@@ -7,20 +7,31 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
 	          <li class="nav-item dropdown">
-	          	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b class="caret"></b></a>
+	          	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Informasi <b class="caret"></b></a>
 				<ul class="dropdown-menu">					
-					<li><a href="#" class="dropdown-item">Web Design</a></li>
-					<li><a href="#" class="dropdown-item">Web Development</a></li>
-					<li><a href="#" class="dropdown-item">Graphic Design</a></li>
-					<li><a href="#" class="dropdown-item">Digital Marketing</a></li>
+					<li><a href="#" class="dropdown-item">Objek Wisata</a></li>
+					<li><a href="#" class="dropdown-item">Akomodasi</a></li>
+					<li><a href="#" class="dropdown-item">Event</a></li>
+					<li><a href="#" class="dropdown-item">Budaya</a></li>
+					<li><a href="#" class="dropdown-item">Kuliner</a></li>
 				</ul>
 	          </li>
+	          <li class="nav-item dropdown">
+	          	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Kabupaten <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a href="#" class="dropdown-item">Toba</a></li>
+					<li><a href="#" class="dropdown-item">Tapanuli Utara</a></li>
+					<li><a href="#" class="dropdown-item">Samosir</a></li>
+					<li><a href="#" class="dropdown-item">Simalungun</a></li>
+					<li><a href="#" class="dropdown-item">Dairi</a></li>
+					<li><a href="#" class="dropdown-item">Humbang Hasundutan</a></li>
+					<li><a href="#" class="dropdown-item">Karo</a></li>
+					<li><a href="#" class="dropdown-item">Pakpak Barat</a></li>
+				</ul>
+	          </li>
+	          <li class="nav-item"><a href="index.html" class="nav-link">Map</a></li>
 	          <li class="nav-item cta"><a href="{{url('/login')}}" class="nav-link">Login</a></li>
 
 	        </ul>

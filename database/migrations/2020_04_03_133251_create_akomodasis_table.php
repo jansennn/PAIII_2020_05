@@ -24,7 +24,7 @@ class CreateAkomodasisTable extends Migration
             $table->unsignedBigInteger('category_akomodasi_id');
             $table->string('nama_akomodasi');
             $table->string('lokasi');
-            $table->string('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
 
 

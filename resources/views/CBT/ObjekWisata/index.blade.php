@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="deskripsi">Deskripsi</label>
-                                    <textarea name="deskripsi" id="deskripsi" cols="5" rows="5" class="form-control {{ $errors->has('deskripsi') ? 'is-invalid':'' }}" required=""></textarea>
+                                    <textarea class="ckeditor"  name="deskripsi" id="ckedtor" cols="5" rows="5" class="form-control {{ $errors->has('deskripsi') ? 'is-invalid':'' }}" required=""></textarea>
                                 </div>
                             @endslot    
                             @slot('footer')
@@ -147,7 +147,6 @@
                                             <td>#</td>
                                             <td>Nama Wisata</td>
                                             <td>Lokasi</td>
-                                            <td>Foto</td>
                                             <td>Longitude</td>
                                             <td>Latitude</td>
                                             <td>Category</td>
@@ -163,7 +162,6 @@
                                                 <td>{{ $no++ }}</td>
                                                 <td>{{$objekWisata->nama_objek_wisata}}</td>
                                                 <td>{{$objekWisata->lokasi}}</td>
-                                                <td>{{$objekWisata->foto}}</td>
                                                 <td>{{$objekWisata->longitude}}</td>
                                                 <td>{{$objekWisata->latitude}}</td>
                                                 <td>{{$objekWisata->category_id}}</td>

@@ -13,7 +13,7 @@ class ObjekWisataController extends Controller
     	$kabupaten_id = session('kabupaten_id');
     	$kabupaten = Kabupaten::findOrFail($kabupaten_id);
     	$categorys = CategoryWisata::all();
-    	$objekWisatas = ObjekWisata::all();
+    	$objekWisatas = ObjekWisata::where('kabupaten_id', $kabupaten_id)->get();
 
 
     	return view('CBT.ObjekWisata.index',compact('objekWisatas','categorys','kabupaten'));
@@ -35,7 +35,7 @@ class ObjekWisataController extends Controller
         $objekWisata->foto = $gambar;
     	if($objekWisata->save()){
             
-            $file->move(\base_path() ."/public/images/information/ObjekWisata", $gambar);
+            $file->move(\base_path() ."/public/Kab/information/ObjekWisata", $gambar);
     		Alert::success('Success', $request->nama_objek_wisata. ' berhasil ditambahkan');
     		return redirect()->back();
     	}
@@ -54,7 +54,7 @@ class ObjekWisataController extends Controller
             //update data
             $objekWisata->update([
                 'nama_objek_wisata' => $request->name,
-                'lokasi' => $request->description,
+                'lokasi' => $request->lokasi,
                 'foto' => $request->foto,
                 'longitude' => $request->longitude,
                 'latitude' => $request->latitude,

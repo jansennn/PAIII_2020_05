@@ -22,6 +22,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCqk0o7gAPnf-hWOKtlFPjYtvWBKgDo33o" type="text/javascript"></script>
+
+    <script type="text/javascript" src="{{ asset('js/ckeditor/ckeditor.js')}}"></script>
 </head>
 <body class="hold-transition sidebar-mini">
     
