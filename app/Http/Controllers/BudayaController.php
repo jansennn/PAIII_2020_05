@@ -11,8 +11,8 @@ class BudayaController extends Controller
 {
     public function index(){
     	$kabupaten_id = session('kabupaten_id');
-    	$budayas = Budaya::all();
-    	$kabupatens = Kabupaten::where('kabupaten_id', $kabupaten_id)->get();
+    	$budayas = Budaya::where('kabupaten_id', $kabupaten_id)->get();
+    	$kabupatens = Kabupaten::findOrFail($kabupaten_id);
 
     	return view('CBT.Budaya.index',compact('budayas','kabupatens'));
     }

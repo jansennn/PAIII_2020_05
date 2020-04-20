@@ -7,7 +7,7 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+	          <li class="nav-item"><a href="{{url('/')}}" class="nav-link">Beranda</a></li>
 	          <li class="nav-item dropdown">
 	          	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Informasi <b class="caret"></b></a>
 				<ul class="dropdown-menu">					
@@ -21,16 +21,17 @@
 	          <li class="nav-item dropdown">
 	          	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Kabupaten <b class="caret"></b></a>
 				<ul class="dropdown-menu">					
-					<li><a href="#" class="dropdown-item">Toba</a></li>
-					<li><a href="#" class="dropdown-item">Tapanuli Utara</a></li>
-					<li><a href="#" class="dropdown-item">Samosir</a></li>
-					<li><a href="#" class="dropdown-item">Simalungun</a></li>
-					<li><a href="#" class="dropdown-item">Dairi</a></li>
-					<li><a href="#" class="dropdown-item">Humbang Hasundutan</a></li>
-					<li><a href="#" class="dropdown-item">Karo</a></li>
-					<li><a href="#" class="dropdown-item">Pakpak Barat</a></li>
+					<li><a href="{{url('Kab',['id' => 2])}}" class="dropdown-item">Toba</a></li>
+					<li><a href="{{url('Kab',['id' => 3])}}" class="dropdown-item">Tapanuli Utara</a></li>
+					<li><a href="{{url('Kab',['id' => 5])}}" class="dropdown-item">Samosir</a></li>
+					<li><a href="{{url('Kab',['id' => 4])}}" class="dropdown-item">Simalungun</a></li>
+					<li><a href="{{url('Kab',['id' => 7])}}" class="dropdown-item">Dairi</a></li>
+					<li><a href="{{url('Kab',['id' => 1])}}" class="dropdown-item">Humbang Hasundutan</a></li>
+					<li><a href="{{url('Kab',['id' => 6])}}" class="dropdown-item">Karo</a></li>
+					<li><a href="{{url('Kab',['id' => 8])}}" class="dropdown-item">Pakpak Barat</a></li>
 				</ul>
 	          </li>
+	          <li class="nav-item"><a href="{{url('/transportasion')}}" class="nav-link">Transportasion</a></li>
 	          <li class="nav-item"><a href="index.html" class="nav-link">Map</a></li>
 	          <li class="nav-item cta"><a href="{{url('/login')}}" class="nav-link">Login</a></li>
 

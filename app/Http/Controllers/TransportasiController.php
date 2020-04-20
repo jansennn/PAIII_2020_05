@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class TransportasiController extends Controller
 {
-    //
+    public function index(){
+    	return view('wisatawan.Transportasi.index');
+    }
 }

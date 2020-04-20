@@ -26,7 +26,6 @@ Route::prefix('admin')->group(function(){
 });
 //login
 Route::get('/login', 'AutentikasiController@login');
-
 Route::prefix('autentikasi')->group(function(){
     Route::post('login_process', 'AutentikasiController@login_process');
     //logout
@@ -35,3 +34,8 @@ Route::prefix('autentikasi')->group(function(){
 
 //Kabupaten
 Route::get('/Kab/{id}', 'KabupatenController@index');
+Route::get('/Kab/Information/ObjekWisata/{id}', 'ObjekWisataController@displayObjekWisata');
+Route::get('/Kab/Information/Akomodasi/{id}', 'AkomodasiController@displayAkomodasi');
+
+//Transportasion
+Route::get('/transportasion', 'TransportasiController@index');

@@ -65,8 +65,7 @@
   <script src="{{asset('js_wisatawan/jquery.animateNumber.min.js')}}"></script>
   <script src="{{asset('js_wisatawan/bootstrap-datepicker.js')}}"></script>
   <script src="{{asset('js_wisatawan/scrollax.min.js')}}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="{{asset('js_wisatawan/google-map.js')}}"></script>
+
   <script src="{{asset('js_wisatawan/main.js')}}"></script>
   <link rel="stylesheet" type="text/css" href="{{asset('css_wisatawan/style2.css')}}">
     

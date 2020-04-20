@@ -1,7 +1,7 @@
 @extends('layouts.wisatawan.master')
 
 @section('title')
-    <title>Home Kepariwisataan</title>
+    <title>Kabupaten</title>
 @endsection
 
 @section('content')
@@ -22,7 +22,7 @@
         	@foreach($objekWisatas as $objekWisata)
         		<div class="col-md-4 ftco-animate" >
 		    		<div class="project-wrap" id="card1">
-		    			<a href="#" class="img" style="background-image: url(information/ObjekWisata/<?= $objekWisata->foto?>);"></a>
+		    			<a href="{{url('Kab/Information/ObjekWisata',['id' => $objekWisata->id])}}" class="img" style="background-image: url(information/ObjekWisata/<?= $objekWisata->foto?>);"></a>
 		    			<div class="text p-4">
 		    				<span class="days"><span class="badge badge-warning">Objek Wisata</span></span>
 		    				<h3><a href="#"><?= $objekWisata->nama_objek_wisata ?></a></h3>
@@ -50,7 +50,7 @@
         	@foreach($akomodasis as $akomodasi)
         		<div class="col-md-4 ftco-animate" >
 		    		<div class="project-wrap" id="card1">
-		    			<a href="#" class="img" style="background-image: url(information/Akomodasi/<?= $akomodasi->foto?>);"></a>
+		    			<a href="{{url('Kab/Information/Akomodasi',['id' => $akomodasi->id])}}" class="img" style="background-image: url(information/Akomodasi/<?= $akomodasi->foto?>);"></a>
 		    			<div class="text p-4">
 		    				<span class="days"><span class="badge badge-warning">Akomodasi</span></span>
 		    				<h3><a href="#"><?= $akomodasi->nama_akomodasi ?></a></h3>
@@ -122,10 +122,6 @@
         </div>
     	</div>
     </section>
-    <div id="sec3">
-    	<div class="container">
-    		
-    	</div>
-    </div>
+   
 
 @endsection
