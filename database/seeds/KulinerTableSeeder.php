@@ -51,6 +51,33 @@ class KulinerTableSeeder extends Seeder
                 'created_at' => Carbon::now('Asia/Jakarta'),
                 'updated_at' => Carbon::now('Asia/Jakarta')
             ],
+            [
+                'nama_kuliner' => 'Hutanta Cafe',
+                'jenis_kuliner' => 'Restorant',
+                'longitude' => '99.081209',
+                'foto' => 'sa.jpg',
+                'latitude' => '2.338114',
+                'lokasi' => 'Jl. P. Siantar No.KM 2, Sibola Hotangsas, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'deskripsi' => 'cantik',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_kuliner' => 'Cantik Daijo Cafe',
+                'jenis_kuliner' => 'Restorant',
+                'longitude' => '99.11763169999999',
+                'foto' => 'sa.jpg',
+                'latitude' => '2.35191',
+                'lokasi' => 'Jl. Sisingamangaraja, Aruan, Lagu Boti, Kabupaten Toba Samosir, Sumatera Utara 22381, Indonesia',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'deskripsi' => 'cantik',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+
     	]);
     }
 }

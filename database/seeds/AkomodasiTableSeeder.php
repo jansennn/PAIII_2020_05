@@ -51,6 +51,137 @@ class AkomodasiTableSeeder extends Seeder
                 'created_at' => Carbon::now('Asia/Jakarta'),
                 'updated_at' => Carbon::now('Asia/Jakarta')
             ],
+            [
+                'nama_akomodasi' => 'OYO 1095 Rap Hotel',
+                'lokasi' => 'Jl. Siborong Borong - Parapat No.57, Pardede Onan, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '99.05957169999999',
+                'latitude' => '2.33342',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_akomodasi' => 'Hotel Grand Toba',
+                'lokasi' => '8B, Jl. Bukit Barisan No.8A, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '99.0630609',
+                'latitude' => '2.3385977',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_akomodasi' => 'Lago Hotel and Resto',
+                'lokasi' => 'Jalan Sibolahotang SAS Desa Sibolahotang,Balige Kec.Balige Kab.Toba Samosir, Balige, Danau Toba, Sumatera Utara, Indonesia, 22312',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '99.07737639999999',
+                'latitude' => '2.3404533',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_akomodasi' => 'Ompu Herti Hotel',
+                'lokasi' => 'Jl. Pemandian No.02, Tobasa, Sangkar Nihuta, Balige, Sumatera Utara 22312, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '99.05563479999999',
+                'latitude' => '2.3343228',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_akomodasi' => 'Sapadia Villa Balige',
+                'lokasi' => 'Jalan Sutomo Kel. Sangkar Nihuta, Samping Kantor Bupati, Danau Toba, Balige, Toba Samosir Regency, North Sumatra 22312, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '99.0521644',
+                'latitude' => '2.3306318',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_akomodasi' => 'Ita Soposurung',
+                'lokasi' => 'Jl. Lintas Tengah Sumatera No.16, Hinalang Bagasan, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '99.0500794',
+                'latitude' => '2.3270777',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_akomodasi' => 'Hotel Nusantara',
+                'lokasi' => 'Jalan By Pass Soekarno - Hatta, Sukabumi Indah, Kec. Sukabumi, Kota Bandar Lampung, Lampung 35122, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '105.2902439',
+                'latitude' => '-5.396077099999999',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_akomodasi' => 'Hotel Mezra',
+                'lokasi' => 'Jl. Sisingamangaraja No.24, Napitupulu Bagasan, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '99.06504369999999',
+                'latitude' => '2.3346844',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_akomodasi' => 'Tiara Bunga Hotel',
+                'lokasi' => 'Jl. Tuktuk Jl. Raya TaraBunga, Tara Bunga, Tampahan, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '99.0304127',
+                'latitude' => '2.3631363',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ],
+            [
+                'nama_akomodasi' => 'Homestay Ita Pagar Batu',
+                'lokasi' => 'Silalahi Pagar Batu, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
+                'foto' => 'sa.jpg',
+                'cbt_id' => 1,
+                'kabupaten_id' => 2,
+                'category_akomodasi_id' => 1,
+                'deskripsi' => 'cantik',
+                'longitude' => '99.0493353',
+                'latitude' => '2.331531',
+                'created_at' => Carbon::now('Asia/Jakarta'),
+                'updated_at' => Carbon::now('Asia/Jakarta')
+            ]
+
     	]);
     }
 }
