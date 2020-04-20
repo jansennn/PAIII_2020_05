@@ -1,3 +1,8 @@
+ <div id="sec3">
+      <div class="container">
+        
+      </div>
+    </div>
 <footer class="ftco-footer bg-bottom" style="background-image: url(images/footer-bg.jpg);">
       <div class="container">
         <div class="row mb-5">

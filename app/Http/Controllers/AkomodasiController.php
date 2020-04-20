@@ -13,10 +13,8 @@ class AkomodasiController extends Controller
     public function index(){
     	$kabupaten_id = session('kabupaten_id');
     	$kabupaten = Kabupaten::findOrFail($kabupaten_id);
-    	$akomodasis = Akomodasi::all();
+    	$akomodasis = Akomodasi::where('kabupaten_id' , $kabupaten_id)->get();
     	$categoryAkomodasis = CategoryAkomodasi::all();
-
-
 
     	return view('CBT.Akomodasi.index',compact('akomodasis','kabupaten','categoryAkomodasis'));
     }
@@ -74,5 +72,10 @@ class AkomodasiController extends Controller
 
     public function destroy($id){
 
+    }
+
+    public function displayAkomodasi($id){
+        $akomodasi = Akomodasi::findOrFail($id);
+        return view('wisatawan.Akomodasi.index',compact('akomodasi'));
     }
 }

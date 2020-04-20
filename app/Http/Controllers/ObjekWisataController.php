@@ -15,7 +15,6 @@ class ObjekWisataController extends Controller
     	$categorys = CategoryWisata::all();
     	$objekWisatas = ObjekWisata::where('kabupaten_id', $kabupaten_id)->get();
 
-
     	return view('CBT.ObjekWisata.index',compact('objekWisatas','categorys','kabupaten'));
     }
 
@@ -76,5 +75,11 @@ class ObjekWisataController extends Controller
         $objekWisata->delete();
          Alert::success('Success', 'Objek Wisata berhasil dihapus');
         return redirect()->back();
+    }
+
+
+    public function displayObjekWisata($id){
+        $objekWisata = ObjekWisata::findOrFail($id);
+        return view('wisatawan.ObjekWisata.index',compact('objekWisata'));
     }
 }
