@@ -22,7 +22,7 @@
 	          	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Kabupaten <b class="caret"></b></a>
 				<ul class="dropdown-menu">					
 					<li><a href="{{url('Kab',['id' => 2])}}" class="dropdown-item">Toba</a></li>
-					<li><a href="{{url('Kab',['id' => 3])}}" class="dropdown-item">Tapanuli Utara</a></li>
+					<li><a href="{{url('Kab',['id' => 3])}}" class="dropdown-item">Tapanuli Utara</a></li >
 					<li><a href="{{url('Kab',['id' => 5])}}" class="dropdown-item">Samosir</a></li>
 					<li><a href="{{url('Kab',['id' => 4])}}" class="dropdown-item">Simalungun</a></li>
 					<li><a href="{{url('Kab',['id' => 7])}}" class="dropdown-item">Dairi</a></li>
@@ -32,7 +32,7 @@
 				</ul>
 	          </li>
 	          <li class="nav-item"><a href="{{url('/transportasion')}}" class="nav-link">Transportasion</a></li>
-	          <li class="nav-item"><a href="index.html" class="nav-link">Map</a></li>
+	          <li class="nav-item"><a href="{{url('/map')}}" class="nav-link">Map</a></li>
 	          <li class="nav-item cta"><a href="{{url('/login')}}" class="nav-link">Login</a></li>
 
 	        </ul>

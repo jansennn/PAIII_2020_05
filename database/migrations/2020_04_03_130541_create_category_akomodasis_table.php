@@ -16,7 +16,7 @@ class CreateCategoryAkomodasisTable extends Migration
        Schema::create('category_akomodasis', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama');
-            $table->string('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
 
         });

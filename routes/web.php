@@ -14,7 +14,7 @@
 Route::get('/', 'HomeController@index');
 Route::get('/login', 'AutentikasiController@login');
 Route::prefix('admin')->group(function(){
-	Route::get('/index','CbtController@index');
+	Route::get('/index','CbtController@index1');
     Route::resource('/kategori', 'CategoryWisataController');
     Route::resource('CategoryAkomodasi', 'CategoryAkomodasiController');
     Route::resource('/ObjekWisata', 'ObjekWisataController');
@@ -23,6 +23,7 @@ Route::prefix('admin')->group(function(){
     Route::resource('/Kuliner', 'KulinerController');
     Route::resource('/Event', 'EventController');
     Route::resource('/Transportasi', 'TransportasiController');
+    Route::resource('/User', 'CbtController');
 });
 //login
 Route::get('/login', 'AutentikasiController@login');
@@ -39,3 +40,6 @@ Route::get('/Kab/Information/Akomodasi/{id}', 'AkomodasiController@displayAkomod
 
 //Transportasion
 Route::get('/transportasion', 'TransportasiController@index');
+
+//Map
+Route::get('/map', 'MapController@displayMap');

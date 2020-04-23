@@ -23,7 +23,7 @@ class AutentikasiController extends Controller
             session(['nama' => $cbt->nama]);
 
     		Alert::success('Success',  ' success login');
-    		return redirect()->action('CbtController@index');
+    		return redirect()->action('CbtController@index1');
     	}else{
     		
     		Alert::success('Success',  ' gagal login');

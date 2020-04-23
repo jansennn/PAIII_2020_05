@@ -84,15 +84,6 @@ class KabupatenTableSeeder extends Seeder
             'created_at' => Carbon::now('Asia/Jakarta'),
             'updated_at' => Carbon::now('Asia/Jakarta')
             ],
-            [
-            'alamat' => 'Laguboti',
-            'nama_kabupaten' => 'Toba',
-            'gambar_kabupaten' => 'toba.jpg',
-            'longitude' => '98.2212979',
-            'latitude' => '2.5135376',
-            'created_at' => Carbon::now('Asia/Jakarta'),
-            'updated_at' => Carbon::now('Asia/Jakarta')
-            ],
         ]);
     }
 }
