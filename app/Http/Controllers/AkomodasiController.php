@@ -13,7 +13,7 @@ class AkomodasiController extends Controller
     public function index(){
     	$kabupaten_id = session('kabupaten_id');
     	$kabupaten = Kabupaten::findOrFail($kabupaten_id);
-    	$akomodasis = Akomodasi::where('kabupaten_id' , $kabupaten_id)->get();
+    	$akomodasis = Akomodasi::where('kabupaten_id' , $kabupaten_id)->paginate(5);
     	$categoryAkomodasis = CategoryAkomodasi::all();
 
     	return view('CBT.Akomodasi.index',compact('akomodasis','kabupaten','categoryAkomodasis'));
@@ -53,25 +53,29 @@ class AkomodasiController extends Controller
             //select data berdasarkan id
             $akomodasi = Akomodasi::findOrFail($id);
             //update data
-            $akomodasi->update([
-                'nama_akomodasi' => $request->nama_akomodasi,
-                'lokasi' => $request->lokasi,
-                'longitude' => $request->longitude,
-                'latitude' => $request->latitude,
-                'deskripsi' => $request->deskripsi
-            ]);
+
+            $akomodasi->nama_akomodasi = $request->nama_akomodasi;
+            $akomodasi->lokasi = $request->lokasi;
+            $akomodasi->longitude = $request->longitude;
+            $akomodasi->latitude = $request->latitude;
+            $akomodasi->deskripsi = $request->deskripsi;
+            $akomodasi->save();
             
-            //redirect ke route kategori.index
+            //redirect ke route Akomodasi.index
             Alert::success('Success', $request->nama_akomodasi. ' berhasil diedit');
-            return redirect()->back();
+
+            return redirect(route('Akomodasi.index'))->with(['success' => 'Akomodasi: ' . $request->nama_akomodasi . ' Diedit']);
         } catch (\Exception $e) {
             //jika gagal, redirect ke form yang sama lalu membuat flash message error
-            return redirect()->back()->with(['error' => $e->getMessage()]);
+            return redirect()->back();
         }
     }
 
-    public function destroy($id){
-
+    public function destroy($id){   
+        $akomodasi = Akomodasi::findOrFail($id);
+        $akomodasi->delete();
+         Alert::success('Success', 'Akomodasi berhasil dihapus');
+        return redirect()->back();
     }
 
     public function displayAkomodasi($id){

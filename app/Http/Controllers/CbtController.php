@@ -10,7 +10,7 @@ class CbtController extends Controller
 {
 	public function index(){
 		$kabupaten_id = session('kabupaten_id');
-		$cbts = Cbt::where('kabupaten_id', $kabupaten_id)->get();
+		$cbts = Cbt::where('kabupaten_id', $kabupaten_id)->paginate(10);
 		return view('CBT.User.index',compact('cbts'));
 	}
 

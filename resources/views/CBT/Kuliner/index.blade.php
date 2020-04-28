@@ -123,7 +123,7 @@
                         @endcomponent('components.card')    
                         @component('components.card')
                                 @slot('header')
-                                <b>List Objek Wisata</b>
+                                <b>List Kuliner</b>
                             @endslot
                             
                             @slot('body')
@@ -170,6 +170,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                {{ $kuliners->links() }}
                             </div>
                             @endslot
                             @slot('footer')

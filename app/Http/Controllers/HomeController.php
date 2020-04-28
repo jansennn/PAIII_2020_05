@@ -15,4 +15,4 @@ class HomeController extends Controller
     	$objekWisatas2 = ObjekWisata::inRandomOrder()->limit(3)->get();
     	return view('wisatawan.home',compact('kabupatens','objekWisatas1','objekWisatas2'));
     }
-}
+} 

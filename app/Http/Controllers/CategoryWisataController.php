@@ -46,16 +46,16 @@ class CategoryWisataController extends Controller
             //select data berdasarkan id
             $categories = CategoryWisata::findOrFail($id);
             //update data
-            $categories->update([
-                'nama_category' => $request->name,
-                'deskripsi' => $request->description
-            ]);
+            $categories->nama_category = $request->nama_category;
+            $categories->deskripsi = $request->deskripsi;
+            $categories->save();
             
             //redirect ke route kategori.index
-            return redirect(route('kategori.index'))->with(['success' => 'Kategori: ' . $categories->name . ' Ditambahkan']);
+            Alert::success('Success', $request->nama_category. ' berhasil diedit');
+            return redirect(route('kategori.index'))->with(['success' => 'Kategori: ' . $categories->name . ' Diedit']);
         } catch (\Exception $e) {
             //jika gagal, redirect ke form yang sama lalu membuat flash message error
-            return redirect()->back()->with(['error' => $e->getMessage()]);
+            return redirect()->back();
         }
     }
 }

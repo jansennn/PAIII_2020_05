@@ -68,10 +68,10 @@
                                     <label for="lokasi">Lokasi</label>
                                     <textarea name="lokasi" id="lokasi" cols="5" rows="5" class="form-control {{ $errors->has('lokasi') ? 'is-invalid':'' }}" value="{{$objekWisata->lokasi}}" required="">{{$objekWisata->lokasi}}</textarea>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="foto">Foto</label>
                                     <input type="file" name="foto" id="foto" class="form-control {{ $errors->has('foto') ? 'is-invalid':'' }}" value="" required="">
-                                </div>
+                                </div> -->
                                 <div class="form-group">
                                     <label for="longitude">Longitude</label>
                                     <input type="text" name="longitude" id="longitude" value="{{$objekWisata->longitude}}" class="form-control {{ $errors->has('longitude') ? 'is-invalid':'' }}" required>

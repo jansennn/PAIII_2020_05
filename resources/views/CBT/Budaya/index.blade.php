@@ -73,7 +73,7 @@
                     <div class="col-md-8">
                     @component('components.card')
                                 @slot('header')
-                                <b>List Kategori</b>
+                                <b>List Budaya</b>
                             @endslot
                             
                             @slot('body')
@@ -119,6 +119,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                {{ $budayas->links() }}
                             </div>
                             @endslot
                             @slot('footer')

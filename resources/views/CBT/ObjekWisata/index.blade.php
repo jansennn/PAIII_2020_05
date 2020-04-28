@@ -177,6 +177,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                {{$objekWisatas->links()}}
                             </div>
                             @endslot
                             @slot('footer')

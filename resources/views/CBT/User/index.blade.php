@@ -75,7 +75,7 @@
                     <div class="col-md-8">
                     @component('components.card')
                                 @slot('header')
-                                <b>List Kategori</b>
+                                <b>List User CBT</b>
                             @endslot
                             
                             @slot('body')
@@ -124,10 +124,11 @@
                                         @endforelse
                                     </tbody>
                                 </table>
+                                {{ $cbts->links() }}
                             </div>
                             @endslot
                             @slot('footer')
-​                               <i>List Category</i>
+​                               <i>List User CBT</i>
                             @endslot
                         @endcomponent
                     </div>

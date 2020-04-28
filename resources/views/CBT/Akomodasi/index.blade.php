@@ -127,7 +127,7 @@
                         @endcomponent('components.card')    
                         @component('components.card')
                                 @slot('header')
-                                <b>List Objek Akomodasi</b>
+                                <b>List Akomodasi</b>
                             @endslot
                             
                             @slot('body')
@@ -176,6 +176,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                {{ $akomodasis->links() }}
                             </div>
                             @endslot
                             @slot('footer')

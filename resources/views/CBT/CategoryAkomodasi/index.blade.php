@@ -107,6 +107,7 @@
                                         @endforelse
                                     </tbody>
                                 </table>
+                                {{ $categoryAkomodasis->links() }}
                             </div>
                             @endslot
                             @slot('footer')

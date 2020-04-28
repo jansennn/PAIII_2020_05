@@ -13,7 +13,7 @@ class ObjekWisataController extends Controller
     	$kabupaten_id = session('kabupaten_id');
     	$kabupaten = Kabupaten::findOrFail($kabupaten_id);
     	$categorys = CategoryWisata::all();
-    	$objekWisatas = ObjekWisata::where('kabupaten_id', $kabupaten_id)->get();
+    	$objekWisatas = ObjekWisata::where('kabupaten_id', $kabupaten_id)->paginate(5);
 
     	return view('CBT.ObjekWisata.index',compact('objekWisatas','categorys','kabupaten'));
     }
@@ -47,26 +47,28 @@ class ObjekWisataController extends Controller
     }
 
     public function update(Request $request,$id){
+        
     	try {
             //select data berdasarkan id
             $objekWisata = ObjekWisata::findOrFail($id);
             //update data
-            $objekWisata->update([
-                'nama_objek_wisata' => $request->name,
-                'lokasi' => $request->lokasi,
-                'foto' => $request->foto,
-                'longitude' => $request->longitude,
-                'latitude' => $request->latitude,
-                'category_id' => $request->category_id,
-                'kabupaten_id' => $request->kabupaten_id,
-                'deskripsi' => $request->deskripsi
-            ]);
+
+            $objekWisata->nama_objek_wisata = $request->nama_objek_wisata;
+            $objekWisata->lokasi = $request->lokasi;
+            $objekWisata->longitude = $request->longitude;
+            $objekWisata->latitude = $request->latitude;
+            $objekWisata->category_id = $request->category_id;
+            $objekWisata->deskripsi = $request->deskripsi;
+
+            $objekWisata->save();
             
             //redirect ke route kategori.index
-            return redirect(route('ObjekWisata.index'))->with(['success' => 'Kategori: ' . $categories->name . ' Ditambahkan']);
+            Alert::success('Success', $request->nama_objek_wisata. ' berhasil diedit');
+
+            return redirect(route('ObjekWisata.index'))->with(['success' => 'Objek Wisata: ' . $objekWisata->nama_objek_wisata . ' Diedit']);
         } catch (\Exception $e) {
             //jika gagal, redirect ke form yang sama lalu membuat flash message error
-            return redirect()->back()->with(['error' => $e->getMessage()]);
+            return redirect()->back();
         }
     }
 
