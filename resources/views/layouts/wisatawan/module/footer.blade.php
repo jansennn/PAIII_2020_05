@@ -21,14 +21,14 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Kabupaten</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Toba</a></li>
-                <li><a href="#" class="py-2 d-block">Tapanuli Utara</a></li>
-                <li><a href="#" class="py-2 d-block">Samosir</a></li>
-                <li><a href="#" class="py-2 d-block">Humbang Hasundutan</a></li>
-                <li><a href="#" class="py-2 d-block">Simalungun</a></li>
-                <li><a href="#" class="py-2 d-block">Karo</a></li>
-                <li><a href="#" class="py-2 d-block">Dairi</a></li>
-                <li><a href="#" class="py-2 d-block">Pakpak Barat</a></li>
+                <li><a href="{{url('Kab',['id' => 2])}}" class="py-2 d-block">Toba</a></li>
+                <li><a href="{{url('Kab',['id' => 3])}}" class="py-2 d-block">Tapanuli Utara</a></li>
+                <li><a href="{{url('Kab',['id' => 5])}}" class="py-2 d-block">Samosir</a></li>
+                <li><a href="{{url('Kab',['id' => 1])}}" class="py-2 d-block">Humbang Hasundutan</a></li>
+                <li><a href="{{url('Kab',['id' => 4])}}" class="py-2 d-block">Simalungun</a></li>
+                <li><a href="{{url('Kab',['id' => 6])}}" class="py-2 d-block">Karo</a></li>
+                <li><a href="{{url('Kab',['id' => 7])}}" class="py-2 d-block">Dairi</a></li>
+                <li><a href="{{url('Kab',['id' => 8])}}" class="py-2 d-block">Pakpak Barat</a></li>
               </ul>
             </div>
           </div>
@@ -50,9 +50,9 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Kawasan Danau Toba</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">danauToba@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>

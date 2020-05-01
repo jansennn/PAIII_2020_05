@@ -55,7 +55,7 @@ class BudayaController extends Controller
             $budaya->deskripsi = $request->deskripsi;
             $budaya->save();
             
-            //redirect ke route Akomodasi.index
+            //redirect ke route Budaya.index
             Alert::success('Success', $request->nama_budaya. ' berhasil diedit');
 
             return redirect(route('Budaya.index'))->with(['success' => 'Budaya: ' . $request->nama_budaya . ' Diedit']);

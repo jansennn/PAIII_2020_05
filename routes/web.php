@@ -24,6 +24,10 @@ Route::prefix('admin')->group(function(){
     Route::resource('/Event', 'EventController');
     Route::resource('/Transportasi', 'TransportasiController');
     Route::resource('/User', 'CbtController');
+
+    //test
+    Route::post('/testStore','ObjekWisataController@store');
+    Route::get('/testIndexObjekWisata','ObjekWisataController@index');
 });
 //login
 Route::get('/login', 'AutentikasiController@login');

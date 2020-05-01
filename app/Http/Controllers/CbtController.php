@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cbt;
+use App\ObjekWisata;
+use App\Akomodasi;
+use App\Kuliner;
+use App\Budaya;
+use App\Event;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CbtController extends Controller
@@ -11,6 +16,8 @@ class CbtController extends Controller
 	public function index(){
 		$kabupaten_id = session('kabupaten_id');
 		$cbts = Cbt::where('kabupaten_id', $kabupaten_id)->paginate(10);
+		$objekWisatas = ObjekWisata::where('kabupaten_id', $kabupaten_id)->get()->count();
+		
 		return view('CBT.User.index',compact('cbts'));
 	}
 
@@ -36,6 +43,14 @@ class CbtController extends Controller
     }
 
     public function index1(){
-    	return view('CBT.index');
+    	$kabupaten_id = session('kabupaten_id');
+    	$objekWisatas = ObjekWisata::where('kabupaten_id', $kabupaten_id)->get()->count();
+    	$akomodasis = Akomodasi::where('kabupaten_id', $kabupaten_id)->get()->count();
+    	$budayas = Budaya::where('kabupaten_id', $kabupaten_id)->get()->count();
+    	$kuliners = Kuliner::where('kabupaten_id', $kabupaten_id)->get()->count();
+    	$events = Event::where('kabupaten_id', $kabupaten_id)->get()->count();
+    	$cbts = Cbt::where('kabupaten_id', $kabupaten_id)->get()->count();
+
+    	return view('CBT.index',compact('objekWisatas','akomodasis','budayas','kuliners','events','cbts'));
     }
 }
