@@ -35,6 +35,32 @@ class CbtController extends Controller
 		}
 	}
 
+	public function edit($id){
+        $cbt = Cbt::findOrFail($id);
+        return view('CBT.User.edit',compact('cbt'));
+    }
+
+    public function update(Request $request, $id){
+        try {
+            //select data berdasarkan id
+            $cbt = Cbt::findOrFail($id);
+            //update data
+
+            $cbt->nama = $request->nama;
+            $cbt->email = $request->email;
+            $cbt->no_hp = $request->no_hp;
+            $cbt->save();
+            
+            //redirect ke route Budaya.index
+            Alert::success('Success', $request->nama. ' berhasil diedit');
+
+            return redirect(route('User.index'))->with(['success' => 'User: ' . $request->nama . ' Diedit']);
+        } catch (\Exception $e) {
+            //jika gagal, redirect ke form yang sama lalu membuat flash message error
+            return redirect()->back();
+        }
+    }
+
 	public function destroy($id){
     	$cbt = Cbt::findOrFail($id);
         $cbt->delete();

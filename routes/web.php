@@ -47,3 +47,6 @@ Route::get('/transportasion', 'TransportasiController@index');
 
 //Map
 Route::get('/map', 'MapController@displayMap');
+
+//Search
+Route::post('/Search', 'SearchController@search');

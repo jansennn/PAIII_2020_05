@@ -23,14 +23,35 @@
 	  	<div class="row">
 				<div class="col-md-12">
 					<div class="search-wrap-1 ftco-animate p-4">
-						<form action="#" class="search-property-1">
+						<form action="/Search" method="POST" class="search-property-1">
+              {{ csrf_field() }}
            		<div class="row">
           			<div class="col-lg-10 align-items-end">
           				<div class="form-group">
-          					<label for="#">Search</label>
+          					<label for="#">Search Objek Wisata, Kuliner, Event, Akomodasi, Budaya</label>
           				  <div class="form-field">
              					<div class="icon"><span class="ion-ios-search"></span></div>
-        				        <input type="text" class="form-control" placeholder="Search Objek Wisata , Event, Akomodasi, Kuliner, Transportasi">
+        				        <select id="search" name="input" class="form-control">
+                          @foreach($objekWisatas as $objekWisata)
+                            <option value="{{ $objekWisata->nama_objek_wisata}}" type="1">{{ $objekWisata->nama_objek_wisata}}</option>
+                          @endforeach
+                          @foreach($kuliners as $kuliner)
+                            <option value="{{ $kuliner->nama_kuliner}}" type="2">{{ $kuliner->nama_kuliner}}</option>
+                          @endforeach
+                          @foreach($events2 as $event2)
+                            <option value="{{ $event2->nama_event}}" type="3">{{ $event2->nama_event}}</option>
+                          @endforeach
+                          @foreach($akomodasis as $akomodasi)
+                            <option value="{{ $akomodasi->nama_akomodasi}}" type="1">{{ $akomodasi->nama_akomodasi}}</option>
+                          @endforeach
+                          @foreach($budayas as $budaya)
+                            <option value="{{ $budaya->nama_budaya}}" type="1">{{ $budaya->nama_budaya}}</option>
+                          @endforeach
+                          
+                          
+                          
+                          
+                      </select>
         				      </div>
         			    </div>
         		    </div>
@@ -208,4 +229,8 @@
             margin-bottom: 20px;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script type="text/javascript">
+            $('#search').select2();
+    </script> 
 @endsection
