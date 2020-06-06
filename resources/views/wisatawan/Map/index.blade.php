@@ -44,8 +44,8 @@
     </style>
   </head>
   <body>
-  	 @include('layouts.wisatawan.module.nav')  
-  	
+     @include('layouts.wisatawan.module.nav')  
+    
     <div id="map"></div>
     <script>
 
@@ -55,7 +55,7 @@
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 9,
+          zoom: 10,
           center: {lat: 2.3484022, lng: 99.0732353}
         });
 
@@ -64,35 +64,27 @@
 
       // Data for the markers consisting of a name, a LatLng and a zIndex for the
       // order in which these markers should display on top of each other.
-
-      var wisata = [
-      	<?php
-      		foreach($objekWisatas as $objekWisata){
-      	?>	
-        	['<?= $objekWisata->nama_objek_wisata?>', <?= $objekWisata->latitude ?> , <?= $objekWisata->longitude ?>, <?= $objekWisata->id ?>],
+      var wisatas = [
         <?php 
-        	}
+          foreach($objekWisatas as $objekWisata){
+            echo '["'.$objekWisata->nama_objek_wisata.'", '.$objekWisata->latitude.', '.$objekWisata->longitude.', '.$objekWisata->id.'],';
+          }
         ?>
       ];
 
-
-      var akomo = [
-      	<?php
-      		foreach($akomodasis as $akomodasi){
-      	?>	
-        	['<?= $akomodasi->nama_akomodasi?>', <?= $akomodasi->latitude ?> , <?= $akomodasi->longitude ?>, <?= $akomodasi->id ?>],
+      var akomodasis = [
         <?php 
-        	}
+          foreach($akomodasis as $akomodasi){
+            echo '["'.$akomodasi->nama_akomodasi.'", '.$akomodasi->latitude.', '.$akomodasi->longitude.', '.$akomodasi->id.'],';
+          }
         ?>
       ];
 
-      var kuli = [
-      	<?php
-      		foreach($kuliners as $kuliner){
-      	?>	
-        	['<?= $kuliner->nama_kuliner?>', <?= $kuliner->latitude ?> , <?= $kuliner->longitude ?>, <?= $kuliner->id ?>],
+      var kuliners = [
         <?php 
-        	}
+          foreach($kuliners as $kuliner){
+            echo '["'.$kuliner->nama_kuliner.'", '.$kuliner->latitude.', '.$kuliner->longitude.', '.$kuliner->id.'],';
+          }
         ?>
       ];
 
@@ -123,7 +115,6 @@
           // The anchor for this image is the base of the flagpole at (0, 32).
           anchor: new google.maps.Point(0, 32)
         };
-
         var image_kuliner = {
           url: 'http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/24/Restaurant-icon.png',
           // This marker is 20 pixels wide by 32 pixels high.
@@ -133,46 +124,44 @@
           // The anchor for this image is the base of the flagpole at (0, 32).
           anchor: new google.maps.Point(0, 32)
         };
-        // Shapes define the clickable region of the icon. The type defines an HTML
-        // <area> element 'poly' which traces out a polygon as a series of X,Y points.
-        // The final coordinate closes the poly by connecting to the first coordinate.
+
         var shape = {
           coords: [1, 1, 1, 20, 18, 20, 18, 1],
           type: 'poly'
         };
-        for (var i = 0; i < wisata.length; i++) {
-          var beach = wisata[i];
+        for (var i = 0; i < wisatas.length; i++) {
+          var wisata = wisatas[i];
           var marker = new google.maps.Marker({
-            position: {lat: beach[1], lng: beach[2]},
+            position: {lat: wisata[1], lng: wisata[2]},
             map: map,
             icon: image_wisata,
             shape: shape,
-            title: beach[0],
-            zIndex: beach[3]
+            title: wisata[0],
+            zIndex: wisata[3]
           });
         }
 
-        for (var i = 0; i < akomo.length; i++) {
-          var ak = akomo[i];
+        for (var i = 0; i < akomodasis.length; i++) {
+          var akomodasi = akomodasis[i];
           var marker = new google.maps.Marker({
-            position: {lat: ak[1], lng: ak[2]},
+            position: {lat: akomodasi[1], lng: akomodasi[2]},
             map: map,
             icon: image_akomodasi,
             shape: shape,
-            title: ak[0],
-            zIndex: ak[3]
+            title: akomodasi[0],
+            zIndex: akomodasi[3]
           });
         }
 
-        for (var i = 0; i < kuli.length; i++) {
-          var ku = kuli[i];
+        for (var i = 0; i < kuliners.length; i++) {
+          var kuliner = kuliners[i];
           var marker = new google.maps.Marker({
-            position: {lat: ku[1], lng: ku[2]},
+            position: {lat: kuliner[1], lng: kuliner[2]},
             map: map,
             icon: image_kuliner,
             shape: shape,
-            title: ku[0],
-            zIndex: ku[3]
+            title: kuliner[0],
+            zIndex: kuliner[3]
           });
         }
       }
@@ -180,7 +169,6 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqk0o7gAPnf-hWOKtlFPjYtvWBKgDo33o&callback=initMap">
     </script>
-
     @include('layouts.wisatawan.module.footer')
 
     <script src="{{asset('js_wisatawan/jquery.min.js')}}"></script>
