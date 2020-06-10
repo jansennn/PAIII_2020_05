@@ -41,9 +41,10 @@ Route::prefix('autentikasi')->group(function(){
 Route::get('/Kab/{id}', 'KabupatenController@index');
 Route::get('/Kab/Information/ObjekWisata/{id}', 'ObjekWisataController@displayObjekWisata');
 Route::get('/Kab/Information/Akomodasi/{id}', 'AkomodasiController@displayAkomodasi');
+Route::get('/Kab/Information/Kuliner/{id}', 'KulinerController@displayKuliner');
 
 //Transportasion
-Route::get('/transportasion', 'TransportasiController@index');
+Route::get('/transportasion', 'TransportasiController@displayTransportasi');
 
 //Map
 Route::get('/map', 'MapController@displayMap');

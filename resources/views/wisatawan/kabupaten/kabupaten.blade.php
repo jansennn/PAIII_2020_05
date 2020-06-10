@@ -106,7 +106,7 @@
         	@foreach($kuliners as $kuliner)
         		<div class="col-md-4 ftco-animate" >
 		    		<div class="project-wrap" id="card1">
-		    			<a href="#" class="img" style="background-image: url(information/Kuliner/<?= $kuliner->foto?>);"></a>
+		    			<a href="{{url('Kab/Information/Kuliner',['id' => $kuliner->id])}}" class="img" style="background-image: url(information/Kuliner/<?= $kuliner->foto?>);"></a>
 		    			<div class="text p-4">
 		    				<span class="days"><span class="badge badge-warning">Kuliner</span></span>
 		    				<h3><a href="#"><?= $kuliner->nama_kuliner ?></a></h3>

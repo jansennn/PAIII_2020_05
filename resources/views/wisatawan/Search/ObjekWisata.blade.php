@@ -39,7 +39,7 @@
     
 
 @section('content')
-    <div class="jumbotron" style="background-image: url(<?= $objekWisata->foto ?>);
+    <div class="jumbotron" style="background-image: url(Kab/information/ObjekWisata/<?= $objekWisata->foto ?>);
 background-size: cover;
 height: 70%;">
     </div>

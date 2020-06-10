@@ -2,6 +2,8 @@
 
 @section('title')
     <title>Home Kepariwisataan</title>
+    <!-- Font Awesome -->
+
 @endsection
 
 @section('content')
@@ -47,10 +49,6 @@
                           @foreach($budayas as $budaya)
                             <option value="{{ $budaya->nama_budaya}}" type="1">{{ $budaya->nama_budaya}}</option>
                           @endforeach
-                          
-                          
-                          
-                          
                       </select>
         				      </div>
         			    </div>
@@ -82,8 +80,8 @@
         <div class="row">
           @foreach ($kabupatens as $kabupaten)
             <div class="col-md-3 ftco-animate" >
-              <div class="project-destination" style="margin-bottom: 20px;">
-                <a href="{{url('Kab',['id' => $kabupaten->id])}}" class="img" style="background-image: url(Kab/<?= $kabupaten->gambar_kabupaten?>);">
+              <div class="project-destination"  style="margin-bottom: 20px;" id="kab">
+                <a href="{{url('Kab',['id' => $kabupaten->id])}}" class="img" style="background-image: url(Kab/<?= $kabupaten->gambar_kabupaten?>);" >
                   <div class="text">
                     <h3><?= $kabupaten->nama_kabupaten?></h3>
                     <span>Cek </span>
@@ -166,6 +164,44 @@
     	</div>
     </section>
 
+    <section class="ftco-section">
+        <main class="main">
+          <section class="info1">
+            <h2 id="tit">No Place like Toba</h2>
+            <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
+            <a href="#" class="info-link">Learn more...</a>
+          </section>
+          <figure class="figure1">
+             <img class="figure-img" src="https://images.unsplash.com/photo-1570066709052-24943d5c0717?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
+          </figure>
+          <figure class="figure2">
+             <img class="figure-img" src="https://images.unsplash.com/photo-1553513377-9c685bc148e0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
+          </figure>
+          <figure class="figure3">
+             <img class="figure-img" src="https://images.unsplash.com/photo-1560675599-f0432d4ffc2d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
+          </figure>
+          <figure class="figure4">
+             <img class="figure-img" src="https://images.unsplash.com/photo-1560675599-f0432d4ffc2d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
+          </figure>
+          <figure class="figure5">
+             <img class="figure-img" src="https://images.unsplash.com/photo-1570099891251-cb2fcb895de3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
+          </figure>
+          <figure class="figure6">
+             <img class="figure-img" src="https://images.unsplash.com/photo-1585371979158-0e577cf0204e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
+          </figure>
+          <section class="info2">
+            <h2 id="tit">Explore now</h2>
+            <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
+            <a href="#" class="info-link">Learn more...</a>
+          </section>
+          <figure class="figure7">
+             <img class="figure-img" src="https://images.unsplash.com/photo-1545884085-7adec6c688c4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
+          </figure>
+          <figure class="figure7">
+             <img class="figure-img" src="https://images.unsplash.com/photo-1553513377-9c685bc148e0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
+          </figure>
+        </main>
+    </section>
     
 
 
@@ -224,6 +260,10 @@
       </div>
     </section>
 
+
+    <div class="parallax"></div>
+   
+
     <style type="text/css">
         .kabupaten{
             margin-bottom: 20px;
@@ -233,4 +273,7 @@
     <script type="text/javascript">
             $('#search').select2();
     </script> 
+    <link rel="stylesheet" href="{{ asset('css_wisatawan/home.css') }}">
+
+
 @endsection

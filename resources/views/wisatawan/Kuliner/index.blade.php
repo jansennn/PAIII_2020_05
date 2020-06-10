@@ -2,16 +2,16 @@
 
 
 <head>
-    <title>Objek Wisata</title>
+    <title>Kuliner</title>
 
     <script src="{{asset('js_wisatawan/google-map.js')}}"></script>
     <script type="text/javascript">
     var map ;
-    var posisi = {lat:<?= $objekWisata->latitude ?>, lng: <?= $objekWisata->longitude?>};
+    var posisi = {lat:<?= $kuliner->latitude ?>, lng: <?= $kuliner->longitude?>};
     var gambar = "http://icons.iconarchive.com/icons/paomedia/small-n-flat/32/map-marker-icon.png";
-    var isiInfo = "<b><?= $objekWisata->nama_objek_wisata ?></b> </br>"+
-    "Kabupaten : <?= $objekWisata->kabupaten->nama_kabupaten ?> </br>" +
-    "Lokasi : <?= $objekWisata->lokasi?>";
+    var isiInfo = "<b><?= $kuliner->nama_kuliner ?></b> </br>"+
+    "Kabupaten : <?= $kuliner->kabupaten->nama_kabupaten ?> </br>" +
+    "Lokasi : <?= $kuliner->lokasi?>";
 
     function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
@@ -22,7 +22,7 @@
               position:posisi,
               map: map,
               draggable: true,
-              title: '<?= $objekWisata->nama_objek_wisata ?>',
+              title: '<?= $kuliner->nama_objek_wisata ?>',
               icon: gambar,
        });
        var infoWindow = new google.maps.InfoWindow({
@@ -39,7 +39,7 @@
     
 
 @section('content')
-    <div class="jumbotron" style="background-image: url(<?= $objekWisata->foto ?>);
+    <div class="jumbotron" style="background-image: url(<?= $kuliner->foto ?>);
 background-size: cover;
 height: 70%;">
     </div>
@@ -47,12 +47,12 @@ height: 70%;">
     <div class="container">
       <div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
-            <h2 class="mb-4">{{ $objekWisata->nama_objek_wisata}}</h2>
+            <h2 class="mb-4">{{ $kuliner->nama_kuliner}}</h2>
             <hr>
           </div>
       </div>
       <p>
-        <?= $objekWisata->deskripsi ?>
+        <?= $kuliner->deskripsi ?>
       </p>
       <p>
        

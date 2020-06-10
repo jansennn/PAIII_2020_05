@@ -77,4 +77,9 @@ class KulinerController extends Controller
         Alert::success('Success', 'Kuliner berhasil dihapus');
         return redirect()->back();
     }
+
+    public function displayKuliner($id){
+        $kuliner = Kuliner::findOrFail($id);
+        return view('wisatawan.Kuliner.index',compact('kuliner'));
+    }
 }
