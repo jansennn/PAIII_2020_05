@@ -19,9 +19,9 @@ class HomeController extends Controller
     	$objekWisatas2 = ObjekWisata::inRandomOrder()->limit(3)->get();
     	$events = Event::paginate(3);
     	$objekWisatas =ObjekWisata::all();
-    	$kuliners = kuliner::all();
+    	$kuliners = kuliner::inRandomOrder()->limit(3)->get();
     	$events2 = Event::all();
-    	$akomodasis = Akomodasi::all();
+    	$akomodasis = Akomodasi::inRandomOrder()->limit(3)->get();
     	$budayas = Budaya::all();
     	return view('wisatawan.home',compact('kabupatens','objekWisatas1','objekWisatas2','events','objekWisatas','kuliners','events2', 'akomodasis', 'budayas'));
     }

@@ -71,4 +71,9 @@ class BudayaController extends Controller
         Alert::success('Success', 'Budaya berhasil dihapus');
         return redirect()->back();
     }
+
+    public function displayBudaya($id){
+        $budaya = Budaya::findOrFail($id);
+        return view('wisatawan.Budaya.index',compact('budaya'));
+    }
 }

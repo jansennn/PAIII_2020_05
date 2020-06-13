@@ -75,6 +75,7 @@ class TransportasiController extends Controller
 
 
     public function displayTransportasi(){
-        return view('wisatawan.Transportasi.index');
+        $transportasis = Transportasi::all();
+        return view('wisatawan.Transportasi.index',compact('transportasis'));
     }
 }

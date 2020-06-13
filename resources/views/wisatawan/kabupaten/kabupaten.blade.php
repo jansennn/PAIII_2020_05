@@ -6,7 +6,7 @@
 
 @section('content')
   <section class="hero-wrap hero-wrap-1" id="sect1" data-stellar-background-ratio="0.5">
-    <img src="./<?= $kabupaten->gambar_kabupaten?>" id="img_kabupaten" alt="Snow" data-stellar-background-ratio="0.5">
+    <img src="<?= $kabupaten->gambar_kabupaten?>" id="img_kabupaten" alt="Snow" data-stellar-background-ratio="0.5">
     <div class="centered"><font face="Times New Roman"  style="color: white;font-size: 100px"><?= $kabupaten->nama_kabupaten?></font></div>
   </section>
 
@@ -16,6 +16,7 @@
     		<div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Objek Wisata</h2>
+            <hr>
           </div>
         </div>
         <div class="row">
@@ -44,6 +45,7 @@
     		<div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Akomodasi</h2>
+            <hr>
           </div>
         </div>
         <div class="row">
@@ -72,13 +74,14 @@
     		<div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Budaya</h2>
+            <hr>
           </div>
         </div>
         <div class="row">
         	@foreach($budayas as $budaya)
         		<div class="col-md-4 ftco-animate" >
 		    		<div class="project-wrap" id="card1">
-		    			<a href="#" class="img" style="background-image: url(information/Budaya/<?= $budaya->foto?>);"></a>
+		    			<a href="{{url('Kab/Information/Budaya',['id' => $budaya->id])}}" class="img" style="background-image: url(information/Budaya/<?= $budaya->foto?>);"></a>
 		    			<div class="text p-4">
 		    				<span class="days"><span class="badge badge-warning">Budaya</span></span>
 		    				<h3><a href="#"><?= $budaya->nama_budaya ?></a></h3>
@@ -100,6 +103,7 @@
     		<div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Kuliner</h2>
+            <hr>
           </div>
         </div>
         <div class="row">
@@ -121,6 +125,35 @@
         	
         </div>
     	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt">
+        <div class="container">
+            <div class="row justify-content-center pb-4">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Event</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+            @foreach($events as $event)
+                <div class="col-md-4 ftco-animate" >
+                    <div class="project-wrap" id="card1">
+                        <a href="{{url('Kab/Information/Event',['id' => $event->id])}}" class="img" style="background-image: url(information/Event/<?= $event->foto?>);"></a>
+                        <div class="text p-4">
+                            <span class="days"><span class="badge badge-warning">Event</span></span>
+                            <h3><a href="#"><?= $event->nama_event ?></a></h3>
+                            <p class="location"><span class="ion-ios-map"></span> <?= $event->lokasi ?></p>
+                            <ul>
+                                <li><span class="flaticon-shower"></span>Read more...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+            
+        </div>
+        </div>
     </section>
    
 

@@ -8,6 +8,7 @@ use App\ObjekWisata;
 use App\Kuliner;
 use App\Akomodasi;
 use App\Budaya;
+use App\Event;
 class KabupatenController extends Controller
 {
     public function index($id){
@@ -16,6 +17,7 @@ class KabupatenController extends Controller
     	$kuliners = Kuliner::where('kabupaten_id', $id)->paginate(6);
     	$akomodasis = Akomodasi::where('kabupaten_id', $id)->paginate(6);
     	$budayas = Budaya::where('kabupaten_id', $id)->paginate(6);
-    	return view('wisatawan.kabupaten.kabupaten',compact('kabupaten','objekWisatas','kuliners','akomodasis','budayas'));
+    	$events = Event::where('kabupaten_id', $id)->paginate(6);
+    	return view('wisatawan.kabupaten.kabupaten',compact('kabupaten','objekWisatas','kuliners','akomodasis','budayas','events'));
     }
 }

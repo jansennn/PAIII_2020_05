@@ -78,4 +78,9 @@ class EventController extends Controller
         Alert::success('Success', 'Event berhasil dihapus');
         return redirect()->back();
     }
+
+    public function displayEvent($id){
+        $event = Event::findOrFail($id);
+        return view('wisatawan.Event.index',compact('event'));
+    }
 }

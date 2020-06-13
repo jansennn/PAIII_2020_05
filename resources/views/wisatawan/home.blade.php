@@ -3,6 +3,8 @@
 @section('title')
     <title>Home Kepariwisataan</title>
     <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
 
 @endsection
 
@@ -30,7 +32,7 @@
            		<div class="row">
           			<div class="col-lg-10 align-items-end">
           				<div class="form-group">
-          					<label for="#">Search Objek Wisata, Kuliner, Event, Akomodasi, Budaya</label>
+          					<label for="#">Cari Objek Wisata, Kuliner, Event, Akomodasi, Budaya</label>
           				  <div class="form-field">
              					<div class="icon"><span class="ion-ios-search"></span></div>
         				        <select id="search" name="input" class="form-control">
@@ -75,13 +77,14 @@
     		<div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Best Place Destination</h2>
+            <hr>
           </div>
         </div>
         <div class="row">
           @foreach ($kabupatens as $kabupaten)
             <div class="col-md-3 ftco-animate" >
               <div class="project-destination"  style="margin-bottom: 20px;" id="kab">
-                <a href="{{url('Kab',['id' => $kabupaten->id])}}" class="img" style="background-image: url(Kab/<?= $kabupaten->gambar_kabupaten?>);" >
+                <a href="{{url('Kab',['id' => $kabupaten->id])}}" class="img" style="background-image: url(<?= $kabupaten->gambar_kabupaten?>);" >
                   <div class="text">
                     <h3><?= $kabupaten->nama_kabupaten?></h3>
                     <span>Cek </span>
@@ -101,6 +104,7 @@
     		<div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Objek Wisata</h2>
+            <hr>
           </div>
         </div>
 
@@ -127,7 +131,6 @@
                           </div>
                         </div>
                       @endforeach
-                      
                     </div>
                   </div>
 
@@ -161,47 +164,168 @@
               </div>
             </div>
           </div>
+
+          <div>
+            <center>
+              <a href="{{url('informasi1')}}"><div id="btn"><span class="noselect">Load more..</span><div id="circle"></div></div></a>
+            </center>
+          </div>
     	</div>
     </section>
 
-    <section class="ftco-section">
-        <main class="main">
-          <section class="info1">
-            <h2 id="tit">No Place like Toba</h2>
-            <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
-            <a href="#" class="info-link">Learn more...</a>
-          </section>
-          <figure class="figure1">
-             <img class="figure-img" src="https://images.unsplash.com/photo-1570066709052-24943d5c0717?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
-          </figure>
-          <figure class="figure2">
-             <img class="figure-img" src="https://images.unsplash.com/photo-1553513377-9c685bc148e0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
-          </figure>
-          <figure class="figure3">
-             <img class="figure-img" src="https://images.unsplash.com/photo-1560675599-f0432d4ffc2d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
-          </figure>
-          <figure class="figure4">
-             <img class="figure-img" src="https://images.unsplash.com/photo-1560675599-f0432d4ffc2d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
-          </figure>
-          <figure class="figure5">
-             <img class="figure-img" src="https://images.unsplash.com/photo-1570099891251-cb2fcb895de3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
-          </figure>
-          <figure class="figure6">
-             <img class="figure-img" src="https://images.unsplash.com/photo-1585371979158-0e577cf0204e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
-          </figure>
-          <section class="info2">
-            <h2 id="tit">Explore now</h2>
-            <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
-            <a href="#" class="info-link">Learn more...</a>
-          </section>
-          <figure class="figure7">
-             <img class="figure-img" src="https://images.unsplash.com/photo-1545884085-7adec6c688c4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
-          </figure>
-          <figure class="figure7">
-             <img class="figure-img" src="https://images.unsplash.com/photo-1553513377-9c685bc148e0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" alt="a kitten">
-          </figure>
-        </main>
+
+    <section class="ftco-section ftco-no-pt">
+      <div class="container">
+        <div class="row justify-content-center pb-4">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Akomodasi</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          @foreach($akomodasis as $akomodasi)
+            <div class="col-md-4 ftco-animate">
+              <div class="project-wrap">
+                <a href="#" class="img" style="background-image: url(Kab/information/Akomodasi/{{$akomodasi->foto}});"></a>
+                <div class="text p-4">
+                  <span class="price">Explore</span>
+                  <span class="days"><span class="badge badge-warning">Akomodasi</span></span>
+                  <span class="days">{{ $akomodasi->kabupaten->nama_kabupaten}}</span>
+                  <h3><a href="#">{{$akomodasi->nama_akomodasi}}</a></h3>
+                  <p class="location"><span class="ion-ios-map"></span> {{$akomodasi->lokasi}}/p>
+                </div>
+              </div>
+            </div>
+          @endforeach
+        </div>
+         <div>
+            <center>
+              <a href="{{url('informasi2')}}"><div id="btn"><span class="noselect">Load more..</span><div id="circle"></div></div></a>
+            </center>
+          </div>
+      </div>
     </section>
+
+  
+      <div class="main-container">
+        <div class="grid-container">
+          <div class="card card--2x">
+            <div class="card__content big-script padding-large">
+              <p>Nikmati Keindahan Danau Toba</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1570066709052-24943d5c0717?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1553513377-9c685bc148e0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <p><em>Travel is fatal to prejudice, bigotry, and narrow-mindedness.</em></p>
+              <p>— Mark Twain</p>
+            </div>
+          </div>
+          <div class="card card--horizontal">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1560675599-f0432d4ffc2d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+          <div class="card card--featured">
+            <div class="card__side-by-side--m">
+              <div class="card__image">
+                <img src="https://images.pexels.com/photos/1125278/pexels-photo-1125278.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" />
+              </div>
+              <div class="card__content padding-large--l">
+                <h2>Quisque volutpat.</h2>
+                <p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit.</p>
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <div class="card__button">More...</div>
+              </div>
+            </div>
+          </div>
+          <div class="card card--vertical">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1545884085-7adec6c688c4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1545884085-7adec6c688c4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+          <div class="card card--horizontal">
+            <div class="card__side-by-side">
+              <div class="card__image">
+                <img src="https://images.pexels.com/photos/885880/pexels-photo-885880.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" />
+              </div>
+              <div class="card__content">
+                <h3>Lorem ipsum</h3>
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra</p>
+              </div>
+            </div>
+          </div>
+          <div class="card card--vertical">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1553513377-9c685bc148e0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="https://images.pexels.com/photos/269923/pexels-photo-269923.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <p><em>We wander for distraction, but we travel for fulfilment.</em></p>
+              <p>— Hilaire Belloc</p>
+            </div>
+          </div>
+          <div class="card card--2x">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1585371979158-0e577cf0204e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+          <div class="card card--horizontal card--frameless">
+            <div class="card__content big-script">
+              <p>Danau Toba</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1570099891251-cb2fcb895de3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+          <div class="card card--horizontal">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1560675599-f0432d4ffc2d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <p><em>A good traveller has no fixed plans and is not intent on arriving.</em></p>
+              <p>— Lao Tzu</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1553513377-9c685bc148e0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+
     
 
 
@@ -210,29 +334,10 @@
       	<div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Event</h2>
+            <hr>
           </div>
         </div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="Kab/information/Event/c1.jpg" alt="First slide">
-            </div>
-            @foreach($events as $event)
-            <div class="carousel-item">
-              <img class="d-block w-100" src="Kab/information/Event/{{ $event->foto}}" alt="Second slide">
-            </div>
-            @endforeach
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-        <br>
+        
         <div class="row d-flex">
         @foreach($events as $event)
           <div class="col-md-4 d-flex ftco-animate" id="card1">
@@ -257,6 +362,44 @@
         @endforeach
 
         </div>
+
+        <div>
+            <center>
+              <div id="btn"><span class="noselect">Load more..</span><div id="circle"></div></div>
+            </center>
+          </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt">
+      <div class="container">
+        <div class="row justify-content-center pb-4">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Kuliner</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          @foreach($kuliners as $kuliner)
+            <div class="col-md-4 ftco-animate">
+              <div class="project-wrap">
+                <a href="#" class="img" style="background-image: url(Kab/information/Kuliner/{{$kuliner->foto}});"></a>
+                <div class="text p-4">
+                  <span class="price">Explore</span>
+                  <span class="days"><span class="badge badge-warning">Kuliner</span></span>
+                  <span class="days">{{ $kuliner->kabupaten->nama_kabupaten}}</span>
+                  <h3><a href="#">{{$kuliner->nama_kuliner}}</a></h3>
+                  <p class="location"><span class="ion-ios-map"></span> {{$kuliner->lokasi}}/p>
+                </div>
+              </div>
+            </div>
+          @endforeach
+        </div>
+         <div>
+            <center>
+              <a href="{{url('informasi4')}}"><div id="btn"><span class="noselect">Load more..</span><div id="circle"></div></div></a>
+            </center>
+          </div>
       </div>
     </section>
 

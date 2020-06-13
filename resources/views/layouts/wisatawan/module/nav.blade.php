@@ -11,11 +11,11 @@
 	          <li class="nav-item dropdown">
 	          	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Informasi <b class="caret"></b></a>
 				<ul class="dropdown-menu">					
-					<li><a href="#" class="dropdown-item">Objek Wisata</a></li>
-					<li><a href="#" class="dropdown-item">Akomodasi</a></li>
+					<li><a href="{{url('informasi1')}}" class="dropdown-item">Objek Wisata</a></li>
+					<li><a href="{{url('informasi2')}}" class="dropdown-item">Akomodasi</a></li>
 					<li><a href="#" class="dropdown-item">Event</a></li>
-					<li><a href="#" class="dropdown-item">Budaya</a></li>
-					<li><a href="#" class="dropdown-item">Kuliner</a></li>
+					<li><a href="{{url('informasi3')}}" class="dropdown-item">Budaya</a></li>
+					<li><a href="{{url('informasi4')}}" class="dropdown-item">Kuliner</a></li>
 				</ul>
 	          </li>
 	          <li class="nav-item dropdown">
@@ -31,7 +31,7 @@
 					<li><a href="{{url('Kab',['id' => 8])}}" class="dropdown-item">Pakpak Barat</a></li>
 				</ul>
 	          </li>
-	          <li class="nav-item"><a href="{{url('/transportasion')}}" class="nav-link">Transportasion</a></li>
+	          <li class="nav-item"><a href="{{url('/transportasion')}}" class="nav-link">Transportasi</a></li>
 	          <li class="nav-item"><a href="{{url('/map')}}" class="nav-link">Map</a></li>
 	          <li class="nav-item cta"><a href="{{url('/login')}}" class="nav-link">Login</a></li>
 
