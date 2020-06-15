@@ -102,7 +102,6 @@
                                             <td>Kabupaten</td>
                                             <td>Alamat</td>
                                             <td>Jenis Transportasi</td>
-                                            <td>Deskripsi</td>
                                             <td>Aksi</td>
                                         </tr>
                                     </thead>
@@ -115,7 +114,6 @@
                                                 <td>{{$transportasi->kabupaten->nama_kabupaten}}</td>
                                                 <td>{{ $transportasi->alamat }}</td>
                                                 <td>{{ $transportasi->jenis_transportasi }}</td>
-                                                <td>{{$transportasi->deskripsi}}</td>
                                                 
                                                 <td><form action="{{ route('Transportasi.destroy', $transportasi->id) }}" method="POST">
                                                     @csrf

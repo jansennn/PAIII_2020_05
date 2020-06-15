@@ -50,8 +50,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="category_id">Category Akomodasi</label><br>
-                                    <select class="form-control">
+                                    <label for="category_id">Category Akomodasi</label>
+                                    <select class="form-control" name="category_akomodasi_id">
                                         @foreach($categoryAkomodasis as $categoryAkomodasi)
                                             <option value="{{$categoryAkomodasi->id}}">{{$categoryAkomodasi->nama}}</option>
                                         @endforeach
