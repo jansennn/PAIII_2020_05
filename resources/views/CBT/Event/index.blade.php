@@ -45,9 +45,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="kabupaten_id">Kabupaten</label>
-                                    <input type="text" name="kabupaten_id" class="form-control {{ $errors->has('kabupaten_id') ? 'is-invalid':'' }}" id="kabupaten_id" value="{{$kabupatens->nama_kabupaten}}" readonly>
-                                    
+                                    <select class="form-control" name="kabupaten_id" readonly>
+                                            <option value="{{$kabupatens->id}}">{{$kabupatens->nama_kabupaten}}</option>
+                                    </select>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="tgl_awal">Tanggal Mulai</label>
                                     <input type="date" name="tgl_awal" class="form-control {{ $errors->has('tgl_awal') ? 'is-invalid':'' }}" id="tgl_awal" required>
