@@ -76,7 +76,7 @@
     	<div class="container">
     		<div class="row justify-content-center pb-4">
           <div class="col-md-12 heading-section text-center ftco-animate">
-            <h2 class="mb-4">Best Place Destination</h2>
+            <h2 class="mb-4">Pilih tempat tujuan</h2>
             <hr>
           </div>
         </div>
@@ -120,7 +120,7 @@
                       @foreach($objekWisatas1 as $objekWisata1)
                         <div class="col-sm-4">
                           <div class="project-wrap" id="card1">
-                            <a href="#" class="img" style="background-image: url(Kab/information/ObjekWisata/{{$objekWisata1->foto}});"></a>
+                            <a href="{{url('Kab/Information/ObjekWisata',['id' => $objekWisata1->id])}}" class="img" style="background-image: url(Kab/information/ObjekWisata/{{$objekWisata1->foto}});"></a>
                             <div class="text p-4">
                               <span class="price">Explore</span>
                               <span class="days"><span class="badge badge-warning">Objek Wisata</span></span>
@@ -139,7 +139,7 @@
                       @foreach($objekWisatas2 as $objekWisata2)
                        <div class="col-sm-4">
                           <div class="project-wrap" id="card1">
-                            <a href="#" class="img" style="background-image: url(Kab/information/ObjekWisata/{{$objekWisata2->foto}});"></a>
+                            <a href="{{url('Kab/Information/ObjekWisata',['id' => $objekWisata2->id])}}" class="img" style="background-image: url(Kab/information/ObjekWisata/{{$objekWisata2->foto}});"></a>
                             <div class="text p-4">
                               <span class="price">Explore</span>
                               <span class="days"><span class="badge badge-warning">Objek Wisata</span></span>
@@ -186,7 +186,7 @@
           @foreach($akomodasis as $akomodasi)
             <div class="col-md-4 ftco-animate">
               <div class="project-wrap">
-                <a href="#" class="img" style="background-image: url(Kab/information/Akomodasi/{{$akomodasi->foto}});"></a>
+                <a href="{{url('Kab/Information/Akomodasi',['id' => $akomodasi->id])}}" class="img" style="background-image: url(Kab/information/Akomodasi/{{$akomodasi->foto}});"></a>
                 <div class="text p-4">
                   <span class="price">Explore</span>
                   <span class="days"><span class="badge badge-warning">Akomodasi</span></span>
@@ -226,8 +226,8 @@
           </div>
           <div class="card">
             <div class="card__content">
-              <p><em>Travel is fatal to prejudice, bigotry, and narrow-mindedness.</em></p>
-              <p>— Mark Twain</p>
+              <p><em></em></p>
+              <p></p>
             </div>
           </div>
           <div class="card card--horizontal">
@@ -241,10 +241,6 @@
                 <img src="https://images.pexels.com/photos/1125278/pexels-photo-1125278.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" />
               </div>
               <div class="card__content padding-large--l">
-                <h2>Quisque volutpat.</h2>
-                <p>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit.</p>
-                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <div class="card__button">More...</div>
               </div>
             </div>
           </div>
@@ -264,8 +260,8 @@
                 <img src="https://images.pexels.com/photos/885880/pexels-photo-885880.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" />
               </div>
               <div class="card__content">
-                <h3>Lorem ipsum</h3>
-                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra</p>
+                <h3></h3>
+                <p></p>
               </div>
             </div>
           </div>
@@ -281,8 +277,8 @@
           </div>
           <div class="card">
             <div class="card__content">
-              <p><em>We wander for distraction, but we travel for fulfilment.</em></p>
-              <p>— Hilaire Belloc</p>
+              <p><em></em></p>
+              <p></p>
             </div>
           </div>
           <div class="card card--2x">
@@ -292,7 +288,7 @@
           </div>
           <div class="card card--horizontal card--frameless">
             <div class="card__content big-script">
-              <p>Danau Toba</p>
+              <p></p>
             </div>
           </div>
           <div class="card">
@@ -312,8 +308,8 @@
           </div>
           <div class="card">
             <div class="card__content">
-              <p><em>A good traveller has no fixed plans and is not intent on arriving.</em></p>
-              <p>— Lao Tzu</p>
+              <p><em></em></p>
+              <p></p>
             </div>
           </div>
           <div class="card">
@@ -342,7 +338,7 @@
         @foreach($events as $event)
           <div class="col-md-4 d-flex ftco-animate" id="card1">
             <div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url(Kab/information/Event/{{ $event->foto }});">
+              <a href="{{url('Kab/Information/Event',['id' => $event->id])}}" class="block-20" style="background-image: url(Kab/information/Event/{{ $event->foto }});">
               </a>
               <div class="text mt-3 float-right d-block">
                 <div class="d-flex align-items-center mb-4 topp">
@@ -383,7 +379,7 @@
           @foreach($kuliners as $kuliner)
             <div class="col-md-4 ftco-animate">
               <div class="project-wrap">
-                <a href="#" class="img" style="background-image: url(Kab/information/Kuliner/{{$kuliner->foto}});"></a>
+                <a href="{{url('Kab/Information/Kuliner',['id' => $kuliner->id])}}" class="img" style="background-image: url(Kab/information/Kuliner/{{$kuliner->foto}});"></a>
                 <div class="text p-4">
                   <span class="price">Explore</span>
                   <span class="days"><span class="badge badge-warning">Kuliner</span></span>

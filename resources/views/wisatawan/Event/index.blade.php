@@ -18,6 +18,13 @@ height: 70%;">
             <h2 class="mb-4">{{ $event->nama_event}}</h2>
           </div>
       </div>
+       <br>
+      <button type="button" class="btn btn-primary">
+        Dilaksanakan : <span class="badge badge-light">{{$event->tgl_awal}} - {{$event->tgl_akhir}}</span>
+        <span class="sr-only">unread messages</span>
+      </button>
+      <br>
+      <br>
       <p>
         <?= $event->deskripsi ?>
       </p>

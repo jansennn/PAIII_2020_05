@@ -32,7 +32,7 @@
         <section class="hero-section">
           <div class="card-grid">
             @foreach($kuliners as $kuliner)
-                <a class="card" href="#">
+                <a class="card" href="{{url('Kab/Information/Kuliner',['id' => $kuliner->id])}}">
                   <div class="card__background" style="background-image: url(Kab/information/Kuliner/{{$kuliner->foto}})"></div>
                   <div class="card__content">
                     <p class="card__category">Kuliner</p>

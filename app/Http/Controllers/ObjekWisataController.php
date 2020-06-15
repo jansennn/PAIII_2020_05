@@ -82,6 +82,7 @@ class ObjekWisataController extends Controller
 
     public function displayObjekWisata($id){
         $objekWisata = ObjekWisata::findOrFail($id);
-        return view('wisatawan.ObjekWisata.index',compact('objekWisata'));
+        $randObjekWisatas = ObjekWisata::inRandomOrder()->limit(3)->get();
+        return view('wisatawan.ObjekWisata.index',compact('objekWisata','randObjekWisatas'));
     }
 }

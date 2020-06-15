@@ -68,7 +68,7 @@ height: 70%;">
      </div>
      <br>
    
-
+ 
 	
     <style type="text/css">
         .kabupaten{
