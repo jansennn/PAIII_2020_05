@@ -45,9 +45,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="kabupaten_id">Kabupaten</label>
-                                    <select class="form-control" name="kabupaten_id" readonly>
-                                            <option value="{{$kabupatens->id}}">{{$kabupatens->nama_kabupaten}}</option>
-                                    </select>
+                                    <input type="text" name="kabupaten_id" class="form-control {{ $errors->has('kabupaten_id') ? 'is-invalid':'' }}" id="kabupaten_id" value="{{$kabupatens->nama_kabupaten}}" readonly>
+                                    
                                 </div>
                                 <div class="form-group">
                                     <label for="jenis_kuliner">Jenis Kuliner</label>

@@ -59,3 +59,4 @@ Route::get('/informasi1', 'InformasiController@displayObjekWisata');
 Route::get('/informasi2', 'InformasiController@displayAkomodasi');
 Route::get('/informasi3', 'InformasiController@displayBudaya');
 Route::get('/informasi4', 'InformasiController@displayKuliner');
+Route::get('/informasi5', 'InformasiController@displayEvent');

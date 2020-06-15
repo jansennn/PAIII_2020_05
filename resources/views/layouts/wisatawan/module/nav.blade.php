@@ -13,7 +13,7 @@
 				<ul class="dropdown-menu">					
 					<li><a href="{{url('informasi1')}}" class="dropdown-item">Objek Wisata</a></li>
 					<li><a href="{{url('informasi2')}}" class="dropdown-item">Akomodasi</a></li>
-					<li><a href="#" class="dropdown-item">Event</a></li>
+					<li><a href="{{url('informasi5')}}" class="dropdown-item">Event</a></li>
 					<li><a href="{{url('informasi3')}}" class="dropdown-item">Budaya</a></li>
 					<li><a href="{{url('informasi4')}}" class="dropdown-item">Kuliner</a></li>
 				</ul>

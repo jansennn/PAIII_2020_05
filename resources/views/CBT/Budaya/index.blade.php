@@ -45,11 +45,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="kabupaten_id">Kabupaten</label>
-                                    <select class="form-control" name="kabupaten_id" readonly>
-                                            <option value="{{$kabupatens->id}}">{{$kabupatens->nama_kabupaten}}</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
+                                    <input type="text" name="kabupaten_id" class="form-control {{ $errors->has('kabupaten_id') ? 'is-invalid':'' }}" id="kabupaten_id" value="{{$kabupatens->nama_kabupaten}}" readonly>
+                                    
+                                </div>                                <div class="form-group">
                                     <label for="lokasi">Lokasi</label>
                                     <textarea name="lokasi" id="lokasi" cols="5" rows="5" class="form-control {{ $errors->has('lokasi') ? 'is-invalid':'' }}" required=""></textarea>
                                 </div>
@@ -93,7 +91,6 @@
                                             <td>Nama Budaya</td>
                                             <td>Kabupaten</td>
                                             <td>Lokasi</td>
-                                            <td>Deskripsi</td>
                                             <td>Cbt</td>
                                             <td>Aksi</td>
                                         </tr>
@@ -106,7 +103,6 @@
                                                 <td>{{$budaya->nama_budaya}}</td>
                                                 <td>{{$budaya->kabupaten->nama_kabupaten}}</td>
                                                 <td>{{$budaya->lokasi}}</td>
-                                                <td>{{$budaya->deskripsi}}</td>
                                                 <td>{{$budaya->cbt_id}}</td>
                                                 
                                                 <td><form action="{{ route('Budaya.destroy', $budaya->id) }}" method="POST">

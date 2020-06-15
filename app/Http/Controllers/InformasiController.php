@@ -7,6 +7,7 @@ use App\ObjekWisata;
 use App\Akomodasi;
 use App\Budaya;
 use App\Kuliner;
+use App\Event;
 
 class InformasiController extends Controller
 {
@@ -28,5 +29,9 @@ class InformasiController extends Controller
     public function displayKuliner(){
     	$kuliners = Kuliner::inRandomOrder()->get();
     	return view('wisatawan.Informasi.Kuliner.index', compact('kuliners'));
+    }
+    public function displayEvent(){
+        $events = Event::inRandomOrder()->get();
+        return view('wisatawan.Informasi.Event.index', compact('events'));
     }
 }

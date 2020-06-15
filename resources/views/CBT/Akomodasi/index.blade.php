@@ -45,13 +45,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="kabupaten_id">Kabupaten</label>
-                                    <select class="form-control" name="kabupaten_id" readonly>
-                                            <option value="{{$kabupaten->id}}">{{$kabupaten->nama_kabupaten}}</option>
-                                    </select>
+                                    <input type="text" name="kabupaten_id" class="form-control {{ $errors->has('kabupaten_id') ? 'is-invalid':'' }}" id="kabupaten_id" value="{{$kabupaten->nama_kabupaten}}" readonly>
+                                    
                                 </div>
                                 <div class="form-group">
-                                    <label for="category_id">Category Akomodasi</label>
-                                    <select class="form-control" name="category_akomodasi_id">
+                                    <label for="category_id">Category Akomodasi</label><br>
+                                    <select class="form-control">
                                         @foreach($categoryAkomodasis as $categoryAkomodasi)
                                             <option value="{{$categoryAkomodasi->id}}">{{$categoryAkomodasi->nama}}</option>
                                         @endforeach

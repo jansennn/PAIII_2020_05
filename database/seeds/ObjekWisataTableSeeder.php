@@ -20,7 +20,19 @@ class ObjekWisataTableSeeder extends Seeder
 		        'latitude' => '2.3484022',
 		        'category_id' => 1,
 		        'kabupaten_id' => 2,
-		        'deskripsi' => 'cantik',
+		        'deskripsi' => 'Pantai Lumban Bulbul terletak di Sumatera Utara, lebih tepatnya di Desa Lumban Bulbul, Balige, Toba Samosir. Berbeda dari pantai pada umumnya, pantai air tawar ini berada di tepi sekitar Danau Toba.
+
+Di pinggiran pantainya terdapat pasir putih yang menjadi ciri khas dari tempat wisata ini. Dari pantai ini, teman-teman dapat memandang keindahan Danau Toba, serta pemandangan bukit-bukit, dan melihat hijaunya pohon-pohon yang terlihat dari kejauhan.
+
+Pantai Lumban Bulbul menjadi satu-satunya pantai yang berpasir putih di daerah Balige, yang mulai ramai dikunjungi wisatawan. Baik wisatawan yang berasal dari daerah itu sendiri, maupun yang berasal dari luar daerah.
+
+Fasilitas Yang ada Di Pantai Lumban Bulbul.
+
+Banyak terdapat wahana yang disediakan di pantai Lumban bulbul ini, seperti banana boat, solu (perahu), dan juga Kapal untuk berkeliling di danau Toba. Bukan hanya itu juga banyak juga tempat mainan untuk anak-anak, seperti ayun-ayunan dan juga luasnya daerah danau yang dapat dijangkau oleh anak-anak untuk mandi. Tidak kalah juga ada kabar dari wargasetempat bahwa di pantai Lumban bulbul ini diadakan konser oleh artis-artis Batak yaitu dua kali seminggu dengan tujuan untuk menghibur wisatawan yang hadir ke pantai tersebut.
+
+Akses Ke Lumban Bulbul.
+
+Pantai ini dapat ditempuh sekitar 1,5 jam dari kota  Parapat, dapat dicapai dengan menggunakan transportasi umum seperti angkot, namun jika ingin lebih nyaman dapat menggunakan transportasi pribadi seperti mobil, motor, atau bahkan sepeda jika ingin lebih santai. Pantai Bulbul ini dapat juga ditempuh sekitar 1 jam dari Bandara Silangit.',
 		        'cbt_id' => 1,
 		        'created_at' => Carbon::now('Asia/Jakarta'),
 		        'updated_at' => Carbon::now('Asia/Jakarta')
