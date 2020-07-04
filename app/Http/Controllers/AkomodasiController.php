@@ -36,7 +36,7 @@ class AkomodasiController extends Controller
 
     	if($akomodasi->save()){
     		
-	    	$file->move(\base_path() ."/public/images/information/Akomodasi", $gambar);
+	    	$file->move(\base_path() ."/public/Kab/information/Akomodasi", $gambar);
     		
     		Alert::success('Success', $request->nama_akomodasi. ' berhasil ditambahkan');
     		return redirect()->back();

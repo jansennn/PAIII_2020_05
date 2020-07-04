@@ -3,6 +3,7 @@
 @section('title')
     <title>Objek Wisata</title>
     <link rel="stylesheet" href="{{asset('css_wisatawan/informasi.css')}}">
+    <link rel="stylesheet" href="{{asset('css_wisatawan/button_css.css')}}">
 @endsection
 
 @section('content')
@@ -26,9 +27,16 @@
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Objek Wisata</h2>
           </div>
+          <hr>
         </div>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
+
+        <section class="hero-section">
+          @foreach($categoryWisatas as $categoryWisata)
+            <a href="{{url('displayBasedCategory',['id' => $categoryWisata->id])}}"><button class="btn-hover color-1">{{$categoryWisata->nama_category}}</button></a>
+          @endforeach
+        </section>
         <section class="hero-section">
           <div class="card-grid">
             @foreach($objekWisatas as $objekWisata)

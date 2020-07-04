@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-	<div class="hero-wrap js-fullheight" style="background-image: url({{URL::asset('/images_wisatawan/bg_2.jpg')}});" data-stellar-background-ratio="0.5">
+	<div class="hero-wrap js-fullheight" style="background-image: url({{URL::asset('https://images.unsplash.com/photo-1545886290-dc80d8908b9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9')}});" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">

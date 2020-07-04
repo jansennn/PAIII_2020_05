@@ -50,7 +50,9 @@ Route::get('/transportasion', 'TransportasiController@displayTransportasi');
 
 //Map
 Route::get('/map', 'MapController@displayMap');
-
+Route::get('/map1', 'MapController@displayObjek');
+Route::get('/map2', 'MapController@displayAkomodasi');
+Route::get('/map3', 'MapController@displayKuliner');
 //Search
 Route::post('/Search', 'SearchController@search');
 
@@ -60,3 +62,5 @@ Route::get('/informasi2', 'InformasiController@displayAkomodasi');
 Route::get('/informasi3', 'InformasiController@displayBudaya');
 Route::get('/informasi4', 'InformasiController@displayKuliner');
 Route::get('/informasi5', 'InformasiController@displayEvent');
+
+Route::get('/displayBasedCategory/{id}', 'InformasiController@displayObjekBasedCategory');

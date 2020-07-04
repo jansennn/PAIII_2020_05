@@ -31,6 +31,7 @@ class ObjekWisataController extends Controller
         //foto
         $file = $request->file('foto');
         $gambar = $file->getClientOriginalName();
+        $gambar = "asd1.jpg";
         $objekWisata->foto = $gambar;
     	if($objekWisata->save()){
             

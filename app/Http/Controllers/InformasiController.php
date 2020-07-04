@@ -8,12 +8,14 @@ use App\Akomodasi;
 use App\Budaya;
 use App\Kuliner;
 use App\Event;
+use App\CategoryWisata;
 
 class InformasiController extends Controller
 {
     public function displayObjekWisata(){
     	$objekWisatas = ObjekWisata::inRandomOrder()->get();
-    	return view('wisatawan.Informasi.ObjekWisata.index', compact('objekWisatas'));
+        $categoryWisatas = CategoryWisata::inRandomOrder()->get();
+    	return view('wisatawan.Informasi.ObjekWisata.index', compact('objekWisatas','categoryWisatas'));
     }
 
     public function displayAkomodasi(){
@@ -33,5 +35,13 @@ class InformasiController extends Controller
     public function displayEvent(){
         $events = Event::inRandomOrder()->get();
         return view('wisatawan.Informasi.Event.index', compact('events'));
+    }
+
+    public function displayObjekBasedCategory($id){
+        $ids = (int)$id;
+        $objekWisatas = ObjekWisata::where('category_id' , $ids)->get();
+        
+        $categoryWisatas = CategoryWisata::inRandomOrder()->get();
+        return view('wisatawan.Informasi.ObjekWisata.index', compact('objekWisatas','categoryWisatas'));
     }
 }

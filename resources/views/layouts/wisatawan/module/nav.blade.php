@@ -32,7 +32,14 @@
 				</ul>
 	          </li>
 	          <li class="nav-item"><a href="{{url('/transportasion')}}" class="nav-link">Transportasi</a></li>
-	          <li class="nav-item"><a href="{{url('/map')}}" class="nav-link">Map</a></li>
+	          <li class="nav-item dropdown">
+	          	<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Map <b class="caret"></b></a>
+				<ul class="dropdown-menu">					
+					<li><a href="{{url('map1')}}" class="dropdown-item">Objek Wisata</a></li>
+					<li><a href="{{url('map2')}}" class="dropdown-item">Akomodasi</a></li>
+					<li><a href="{{url('map3')}}" class="dropdown-item">Kuliner</a></li>
+				</ul>
+	          </li>
 	          <li class="nav-item cta"><a href="{{url('/login')}}" class="nav-link">Login</a></li>
 
 	        </ul>

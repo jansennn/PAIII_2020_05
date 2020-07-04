@@ -4,37 +4,19 @@
 <head>
     <title>Kuliner</title>
 
-    <script src="{{asset('js_wisatawan/google-map.js')}}"></script>
-    <script type="text/javascript">
-    var map ;
-    var posisi = {lat:<?= $kuliner->latitude ?>, lng: <?= $kuliner->longitude?>};
-    var gambar = "http://icons.iconarchive.com/icons/paomedia/small-n-flat/32/map-marker-icon.png";
-    var isiInfo = "<b><?= $kuliner->nama_kuliner ?></b> </br>"+
-    "Kabupaten : <?= $kuliner->kabupaten->nama_kabupaten ?> </br>" +
-    "Lokasi : <?= $kuliner->lokasi?>";
-
-    function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 14,
-              center: posisi
-            });
-            var marker = new google.maps.Marker({
-              position:posisi,
-              map: map,
-              draggable: true,
-              title: '<?= $kuliner->nama_objek_wisata ?>',
-              icon: gambar,
-       });
-       var infoWindow = new google.maps.InfoWindow({
-       content: isiInfo,
-       });
-       marker.addListener('click',function() {
-       infoWindow.open(map,marker);
-       });
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    .marker {
+    display: block;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
     }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqk0o7gAPnf-hWOKtlFPjYtvWBKgDo33o&callback=initMap">
-    </script>
+    </style>
 </head>
     
 
@@ -68,11 +50,60 @@ height: 70%;">
      </div>
      <br>
    
-
-	
+ 
+  
     <style type="text/css">
         .kabupaten{
             margin-bottom: 20px;
         }
     </style>
+    <script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVhczEwMDkiLCJhIjoiY2tiNGV0NzNyMGl0MTJ0bzhhNHM4NG40NyJ9._rnTijdsx8Rysc27SrGyxg';
+  var geojson = {
+    'type': 'FeatureCollection',
+    'features': [
+      {
+      'type': 'Feature',
+      'properties': {
+      'message': '{{ $kuliner->nama_kuliner}}',
+      'iconSize': [25, 25]
+      },
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [<?php echo $kuliner->longitude ?>, <?php echo $kuliner->latitude ?>]
+      }
+      }
+    ]
+};
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/light-v10',
+  center: [<?php echo $kuliner->longitude ?>, <?php echo $kuliner->latitude ?>],
+  zoom: 8
+});
+
+// add markers to map
+geojson.features.forEach(function(marker) {
+// create a DOM element for the marker
+var el = document.createElement('div');
+el.className = 'marker';
+el.style.backgroundImage =
+'url(http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/24/Restaurant-icon.png)';
+el.style.width = marker.properties.iconSize[0] + 'px';
+el.style.height = marker.properties.iconSize[1] + 'px';
+ 
+el.addEventListener('click', function() {
+window.alert(marker.properties.message);
+});
+ 
+// add marker to map
+new mapboxgl.Marker(el)
+.setLngLat(marker.geometry.coordinates)
+.addTo(map);
+});
+
+// code from the next step will go here!
+
+</script>
 @endsection

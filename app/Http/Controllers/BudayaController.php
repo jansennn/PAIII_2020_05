@@ -31,7 +31,7 @@ class BudayaController extends Controller
 
     	if($budaya->save()){
     		
-	    	$file->move(\base_path() ."/public/images/information/Budaya", $gambar);
+	    	$file->move(\base_path() ."/public/Kab/information/Budaya", $gambar);
     		
     		Alert::success('Success', $request->nama_budaya. ' berhasil ditambahkan');
     		return redirect()->back();

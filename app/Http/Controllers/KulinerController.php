@@ -34,7 +34,7 @@ class KulinerController extends Controller
         $kuliner->foto = $gambar;
     	if($kuliner->save()){
             
-            $file->move(\base_path() ."/public/images/information/Kuliner", $gambar);
+            $file->move(\base_path() ."/public/Kab/information/Kuliner", $gambar);
     		Alert::success('Success', $request->nama_kuliner. ' berhasil ditambahkan');
     		return redirect()->back();
     	}

@@ -67,7 +67,7 @@
       var wisatas = [
         <?php 
           foreach($objekWisatas as $objekWisata){
-            echo '["'.$objekWisata->nama_objek_wisata.'", '.$objekWisata->latitude.', '.$objekWisata->longitude.', '.$objekWisata->id.'],';
+            echo '["'.$objekWisata->nama_objek_wisata.'", '.$objekWisata->latitude.', '.$objekWisata->longitude.', "'.$objekWisata->lokasi.'"],';
           }
         ?>
       ];
@@ -75,7 +75,7 @@
       var akomodasis = [
         <?php 
           foreach($akomodasis as $akomodasi){
-            echo '["'.$akomodasi->nama_akomodasi.'", '.$akomodasi->latitude.', '.$akomodasi->longitude.', '.$akomodasi->id.'],';
+            echo '["'.$akomodasi->nama_akomodasi.'", '.$akomodasi->latitude.', '.$akomodasi->longitude.', '.$akomodasi->id.',],';
           }
         ?>
       ];
@@ -115,6 +115,7 @@
           // The anchor for this image is the base of the flagpole at (0, 32).
           anchor: new google.maps.Point(0, 32)
         };
+
         var image_kuliner = {
           url: 'http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/24/Restaurant-icon.png',
           // This marker is 20 pixels wide by 32 pixels high.
@@ -136,8 +137,7 @@
             map: map,
             icon: image_wisata,
             shape: shape,
-            title: wisata[0],
-            zIndex: wisata[3]
+            title: wisata[0]
           });
         }
 
