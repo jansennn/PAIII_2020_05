@@ -16,7 +16,7 @@ Langkah langkah menjalankan proyek :
 
 Langkah Langkah git pull origin master
 
-1. git pull origin master
+1. git pull origin master-v2
 2. php artisan migrate:fresh
 3. composer dump-autoload
 4. php artisan db:seed
