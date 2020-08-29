@@ -1,3 +1,17 @@
+# Sistem Informasi Pariwisata di Kawasan Danau Toba
+
+This system is Application based Website that using Laravel framework, Purpose of building this system is to 
+inform the traveller who come from another country.beside that, we hope this system useful to them.
+
+## 📸 ScreenShots
+
+| Light                             		   | Dark                              			  |
+| ---------------------------------------------|--------------------------------------------- |
+| <img src="ss/landing-page.png" width="400">  | <img src="ss/kabupaten.png" width="400">     |
+| <img src="ss/map.png" width="400">  		   | <img src="ss/transportasi.png" width="400">  |
+| <img src="ss/admin.png" width="400">  	   | <img src="ss/crud-informasi.png" width="400">|
+
+
 Langkah langkah menjalankan proyek :
 
 1. Buat Folder baru
