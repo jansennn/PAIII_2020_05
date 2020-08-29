@@ -7,9 +7,9 @@ inform the traveller who come from another country.beside that, we hope this sys
 
 | Light                             		   | Dark                              			  |
 | ---------------------------------------------|--------------------------------------------- |
-| <img src="ss/landing-page.png" width="400">  | <img src="ss/kabupaten.png" width="400">     |
-| <img src="ss/map.png" width="400">  		   | <img src="ss/transportasi.png" width="400">  |
-| <img src="ss/admin.png" width="400">  	   | <img src="ss/crud-informasi.png" width="400">|
+| <img src="ss/landing-page.PNG" width="400">  | <img src="ss/kabupaten.PNG" width="400">     |
+| <img src="ss/map.PNG" width="400">  		   | <img src="ss/transportasi.PNG" width="400">  |
+| <img src="ss/admin.PNG" width="400">  	   | <img src="ss/crud-informasi.PNG" width="400">|
 
 
 Langkah langkah menjalankan proyek :
