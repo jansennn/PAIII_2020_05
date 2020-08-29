@@ -34,14 +34,13 @@
           </div>
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Experience</h2>
+              <h2 class="ftco-heading-2">Informasi</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Adventure</a></li>
-                <li><a href="#" class="py-2 d-block">Hotel and Restaurant</a></li>
-                <li><a href="#" class="py-2 d-block">Beach</a></li>
-                <li><a href="#" class="py-2 d-block">Nature</a></li>
-                <li><a href="#" class="py-2 d-block">Camping</a></li>
-                <li><a href="#" class="py-2 d-block">Party</a></li>
+                <li><a href="{{url('informasi1')}}" class="py-2 d-block">Objek Wisata</a></li>
+                <li><a href="{{url('informasi2')}}" class="py-2 d-block">Akomodasi</a></li>
+                <li><a href="{{url('informasi5')}}" class="py-2 d-block">Event</a></li>
+                <li><a href="{{url('informasi3')}}" class="py-2 d-block">Budaya</a></li>
+                <li><a href="{{url('informasi4')}}" class="py-2 d-block">Kuliner</a></li>
               </ul>
             </div>
           </div>

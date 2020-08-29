@@ -49,6 +49,7 @@
                                             <option value="{{$kabupatens->id}}">{{$kabupatens->nama_kabupaten}}</option>
                                     </select>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="tgl_awal">Tanggal Mulai</label>
                                     <input type="date" name="tgl_awal" class="form-control {{ $errors->has('tgl_awal') ? 'is-invalid':'' }}" id="tgl_awal" required>
@@ -103,7 +104,6 @@
                                             <td>Tanggal mulai</td>
                                             <td>Tanggal Selesai</td>
                                             <td>Lokasi</td>
-                                            <td>Deskripsi</td>
                                             <td>Aksi</td>
                                         </tr>
                                     </thead>
@@ -117,7 +117,6 @@
                                                 <td>{{ $event->tgl_awal }}</td>
                                                 <td>{{ $event->tgl_akhir }}</td>
                                                 <td>{{$event->lokasi}}</td>
-                                                <td>{{$event->deskripsi}}</td>
                                                 
                                                 <td><form action="{{ route('Event.destroy', $event->id) }}" method="POST">
                                                     @csrf

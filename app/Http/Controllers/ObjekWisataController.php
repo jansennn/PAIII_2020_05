@@ -31,6 +31,7 @@ class ObjekWisataController extends Controller
         //foto
         $file = $request->file('foto');
         $gambar = $file->getClientOriginalName();
+        $gambar = "asd1.jpg";
         $objekWisata->foto = $gambar;
     	if($objekWisata->save()){
             
@@ -82,6 +83,7 @@ class ObjekWisataController extends Controller
 
     public function displayObjekWisata($id){
         $objekWisata = ObjekWisata::findOrFail($id);
-        return view('wisatawan.ObjekWisata.index',compact('objekWisata'));
+        $randObjekWisatas = ObjekWisata::inRandomOrder()->limit(3)->get();
+        return view('wisatawan.ObjekWisata.index',compact('objekWisata','randObjekWisatas'));
     }
 }

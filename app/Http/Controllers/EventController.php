@@ -33,7 +33,7 @@ class EventController extends Controller
 
     	if($event->save()){
     		
-	    	$file->move(\base_path() ."/public/images/information/Event", $gambar);
+	    	$file->move(\base_path() ."/public/Kab/information/Event", $gambar);
     		
     		Alert::success('Success', $request->nama_event. ' berhasil ditambahkan');
     		return redirect()->back();
@@ -77,5 +77,10 @@ class EventController extends Controller
         $event->delete();
         Alert::success('Success', 'Event berhasil dihapus');
         return redirect()->back();
+    }
+
+    public function displayEvent($id){
+        $event = Event::findOrFail($id);
+        return view('wisatawan.Event.index',compact('event'));
     }
 }

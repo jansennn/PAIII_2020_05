@@ -15,7 +15,7 @@ class AkomodasiTableSeeder extends Seeder
     		[
     			'nama_akomodasi' => 'Hotel Nabasa',
 		        'lokasi' => 'Jl. Siliwangi No.8, Balige, Kabupaten Toba Samosir, Sumatera Utara, Indonesia',
-		        'foto' => 'sa.jpg',
+		        'foto' => 'nabasa.jpg',
 		        'cbt_id' => 1,
 		        'kabupaten_id' => 2,
 		        'category_akomodasi_id' => 1,
@@ -28,7 +28,7 @@ class AkomodasiTableSeeder extends Seeder
             [
                 'nama_akomodasi' => 'GM Marsaringar Hotel',
                 'lokasi' => 'Balige III, Balige, Kabupaten Toba Samosir, Sumatera Utara, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'marsaringar.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
@@ -41,7 +41,7 @@ class AkomodasiTableSeeder extends Seeder
             [
                 'nama_akomodasi' => 'Mutiara Hotel Balige',
                 'lokasi' => 'Sibola Hotangsas, Balige, Kabupaten Toba Samosir, Sumatera Utara, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'mutiara.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
@@ -54,7 +54,7 @@ class AkomodasiTableSeeder extends Seeder
             [
                 'nama_akomodasi' => 'OYO 1095 Rap Hotel',
                 'lokasi' => 'Jl. Siborong Borong - Parapat No.57, Pardede Onan, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'raphotel.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
@@ -67,7 +67,7 @@ class AkomodasiTableSeeder extends Seeder
             [
                 'nama_akomodasi' => 'Hotel Grand Toba',
                 'lokasi' => '8B, Jl. Bukit Barisan No.8A, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'grandtoba.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
@@ -78,22 +78,9 @@ class AkomodasiTableSeeder extends Seeder
                 'updated_at' => Carbon::now('Asia/Jakarta')
             ],
             [
-                'nama_akomodasi' => 'Lago Hotel and Resto',
-                'lokasi' => 'Jalan Sibolahotang SAS Desa Sibolahotang,Balige Kec.Balige Kab.Toba Samosir, Balige, Danau Toba, Sumatera Utara, Indonesia, 22312',
-                'foto' => 'sa.jpg',
-                'cbt_id' => 1,
-                'kabupaten_id' => 2,
-                'category_akomodasi_id' => 1,
-                'deskripsi' => 'cantik',
-                'longitude' => '99.07737639999999',
-                'latitude' => '2.3404533',
-                'created_at' => Carbon::now('Asia/Jakarta'),
-                'updated_at' => Carbon::now('Asia/Jakarta')
-            ],
-            [
                 'nama_akomodasi' => 'Ompu Herti Hotel',
                 'lokasi' => 'Jl. Pemandian No.02, Tobasa, Sangkar Nihuta, Balige, Sumatera Utara 22312, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'ompuherti.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
@@ -106,7 +93,7 @@ class AkomodasiTableSeeder extends Seeder
             [
                 'nama_akomodasi' => 'Sapadia Villa Balige',
                 'lokasi' => 'Jalan Sutomo Kel. Sangkar Nihuta, Samping Kantor Bupati, Danau Toba, Balige, Toba Samosir Regency, North Sumatra 22312, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'sapadia.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
@@ -119,7 +106,7 @@ class AkomodasiTableSeeder extends Seeder
             [
                 'nama_akomodasi' => 'Ita Soposurung',
                 'lokasi' => 'Jl. Lintas Tengah Sumatera No.16, Hinalang Bagasan, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'ita.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
@@ -132,7 +119,7 @@ class AkomodasiTableSeeder extends Seeder
             [
                 'nama_akomodasi' => 'Hotel Nusantara',
                 'lokasi' => 'Jalan By Pass Soekarno - Hatta, Sukabumi Indah, Kec. Sukabumi, Kota Bandar Lampung, Lampung 35122, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'nusantara.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
@@ -145,7 +132,7 @@ class AkomodasiTableSeeder extends Seeder
             [
                 'nama_akomodasi' => 'Hotel Mezra',
                 'lokasi' => 'Jl. Sisingamangaraja No.24, Napitupulu Bagasan, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'mezra.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
@@ -156,22 +143,9 @@ class AkomodasiTableSeeder extends Seeder
                 'updated_at' => Carbon::now('Asia/Jakarta')
             ],
             [
-                'nama_akomodasi' => 'Tiara Bunga Hotel',
-                'lokasi' => 'Jl. Tuktuk Jl. Raya TaraBunga, Tara Bunga, Tampahan, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
-                'foto' => 'sa.jpg',
-                'cbt_id' => 1,
-                'kabupaten_id' => 2,
-                'category_akomodasi_id' => 1,
-                'deskripsi' => 'cantik',
-                'longitude' => '99.0304127',
-                'latitude' => '2.3631363',
-                'created_at' => Carbon::now('Asia/Jakarta'),
-                'updated_at' => Carbon::now('Asia/Jakarta')
-            ],
-            [
                 'nama_akomodasi' => 'Homestay Ita Pagar Batu',
                 'lokasi' => 'Silalahi Pagar Batu, Balige, Kabupaten Toba Samosir, Sumatera Utara 22312, Indonesia',
-                'foto' => 'sa.jpg',
+                'foto' => 'homestayita.jpg',
                 'cbt_id' => 1,
                 'kabupaten_id' => 2,
                 'category_akomodasi_id' => 1,
